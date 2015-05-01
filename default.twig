@@ -1,0 +1,21 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+<div id="wrap">
+	<nav class="bk-nav" id="nav">
+		{{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+		{{widget('socialicons', 'social', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+	</nav>
+	<div role="main" id="main">
+		<header class="bk-header">
+			{{widget('logo', 'logo', {"defaultlogo": asset('images/keystone-logo.png'),"showTplWidget":"0"})|raw}}
+			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+		</header>
+		<div class="contain" id="contain">
+				{{zone('main')|raw}}
+		</div><!--end contain-->
+		{% include 'includes/footer.twig' %}
+	</div><!--end main-->
+</div><!--end wrap-->
+
+{% endblock %}

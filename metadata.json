@@ -1,0 +1,149 @@
+{
+    "name":"Minimalism",
+    "thumbnail":"minimalism.png",
+    "screenshot":"minimalism.png",
+    "templateType":"standard",
+    "pageTypes": ["home"],
+    "tags": {
+    "en": ["clean", "news", "fullscreen", "blog", "monochromatic", "minimalistic", "serif"],
+    "es": ["limpio", "noticias", "fullscreen", "blog", "monocromo", "minimalista", "serif"],
+    "br": ["limpo", "notícia", "fullscreen", "blog", "monocromático", "minimalista", "serif"]
+    },
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#f3f2f0",
+            "color2":"#28282a",
+            "color3":"#adc0d4",
+            "color4":"#0c0c0c",
+            "color5":"#353538",
+            "color6":"#000000",
+            "color7":"#ffffff"
+        },
+        "Swatch 2": {
+            "color1":"#e2e2de",
+            "color2":"#28282a",
+            "color3":"#86abd0",
+            "color4":"#0c0c0c",
+            "color5":"#28282a",
+            "color6":"#000000",
+            "color7":"#ffffff"
+        },
+        "Swatch 3": {
+            "color1":"#e1e5ea",
+            "color2":"#28282a",
+            "color3":"#a89f99",
+            "color4":"#0c0c0c",
+            "color5":"#28282a",
+            "color6":"#000000",
+            "color7":"#ffffff"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#28282a",
+            "color3":"#5f9ea0",
+            "color4":"#0c0c0c",
+            "color5":"#28282a",
+            "color6":"#000000",
+            "color7":"#f0f0f0"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#28282a",
+            "color3":"#8fbc8f",
+            "color4":"#0c0c0c",
+            "color5":"#28282a",
+            "color6":"#000000",
+            "color7":"#f0f0f0"
+        }
+    },
+    "fontSwatch": {
+       "title": "Montserrat, Times New Roman",
+        "font1": {
+            "font-family": "\"Times New Roman\", serif",
+            "font-size": "40px",
+            "font-weight": "400",
+            "line-height": "54px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "24px",
+            "font-weight": "inherit",
+            "line-height": "26px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "19px",
+            "font-weight": "400",
+            "line-height": "30px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Times New Roman\", serif",
+            "font-size": "15px",
+            "font-weight": "400",
+            "line-height": "22px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch2",
+            "color-hover": "@color-swatch3",
+            "letter-spacing": "inherit",
+            "background-color": "transparent",
+            "background-color-hover": "transparent"
+        },
+        "font7": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "24px",
+            "color": "@color-swatch7",
+            "color-hover": "darken(@color-swatch7, 5%)",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch5",
+            "background-color-hover": "@color-swatch6"
+        },
+        "font8": {
+            "font-family": "\"Times New Roman\", serif",
+            "font-size": "58px",
+            "font-weight": "300",
+            "line-height": "64px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "16px",
+            "font-weight": "300",
+            "line-height": "24px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "20px",
+            "font-weight": "300",
+            "line-height": "48px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        }
+    }
+}
