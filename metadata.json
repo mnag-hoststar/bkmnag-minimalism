@@ -1,7 +1,7 @@
 {
     "name":"Minimalism",
-    "thumbnail":"minimalism.png",
-    "screenshot":"minimalism.png",
+    "thumbnail":"thumbnail.png",
+    "screenshot":"minimalism-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
@@ -72,7 +72,7 @@
             "font-size": "24px",
             "font-weight": "inherit",
             "line-height": "26px",
-            "color": "@color-swatch5",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font3": {
@@ -116,7 +116,7 @@
             "font-weight": "400",
             "line-height": "24px",
             "color": "@color-swatch7",
-            "color-hover": "darken(@color-swatch7, 5%)",
+            "color-hover": "@color-swatch7",
             "letter-spacing": "inherit",
             "background-color": "@color-swatch5",
             "background-color-hover": "@color-swatch6"
