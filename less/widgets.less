@@ -554,6 +554,9 @@ button.btn,
 	    .transition(all, 0.75s, ease);
 	    cursor: pointer;
     }
+    @media @mobile {
+    	width: 100%;
+    }
 }
 
 
@@ -563,10 +566,16 @@ button.btn,
 	color: @font-swatch7-color;
 	background-color: @font-swatch7-background-color;
 	text-transform: uppercase;
+	padding: 12px 30px 12px 50px;
+	display: inline-block;
+	text-align: center;
 	.transition(all, .5s, ease-out);
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		.transition(all, 0.75s, ease);
+	}
+	@media @mobile {
+		width: 100%;
 	}
 }
 
