@@ -1,28 +1,18 @@
 // ------------------------------------
 // BaseKit Standard Theme: LESS > Theme
 // ------------------------------------
-
-
 // -----------------------------
 // #Table of Contents
 // -----------------------------
-
-
 // 1. #TYPOGRAPHY
 // 2. #CUSTOM PAGE
 // 3. #HEADER
 // 4. #FOOTER
-
-
-
 // -----------------------------
 // 1. #TYPOGRAPHY
 // -----------------------------
-
-
 // Colour Swatches
 // ---------------
-
 // @color-swatch1: Background
 // @color-swatch2: Contrast
 // @color-swatch3: Buttons
@@ -30,23 +20,17 @@
 // @color-swatch5: Paragraph
 // @color-swatch6: Navigation Links
 // @color-swatch7: Spare
-
-
 // Colour Variables
 // ----------------
-
-@bg-color: @color-swatch1;          // Background
-@contrast-color: @color-swatch2;    // Contrast Colour
-@button-color: @color-swatch3;      // Button BG Colour
-@heading-color: @color-swatch4;     // Heading Text Colour (H1 - H4)
-@paragraph-color: @color-swatch5;   // Paragraph Text Colour
-@nav-color: @color-swatch6;         // Nav Link Colour
-@spare-color: @color-swatch7;       // Spare Colour
-
-
+@bg-color: @color-swatch1; // Background
+@contrast-color: @color-swatch2; // Contrast Colour
+@button-color: @color-swatch3; // Button BG Colour
+@heading-color: @color-swatch4; // Heading Text Colour (H1 - H4)
+@paragraph-color: @color-swatch5; // Paragraph Text Colour
+@nav-color: @color-swatch6; // Nav Link Colour
+@spare-color: @color-swatch7; // Spare Colour
 // Font Swatches
 // -------------
-
 // font1:  Heading 1
 // font2:  Heading 2
 // font3:  Heading 3
@@ -57,9 +41,6 @@
 // font8:  Feature Headline
 // font9:  Feature Strapline
 // font10: Company Name (Logo)
-
-
-
 h5 {
 	font-family: @font-swatch4-font-family;
 	font-size: @font-swatch5-font-size;
@@ -71,31 +52,26 @@ hr.line {
 	background-color: lighten(@color-swatch5, 75%);
 }
 
-
-
-
 // -----------------------------
 // 3. #HEADER
 // -----------------------------
-
-
 .bk-pt-home {
-	.widget.feature + .bk-header {
+	.widget.feature+.bk-header {
 		background: transparent;
 		//padding: 65px 0 30px 30px;
 		position: absolute;
 		top: 0;
 		z-index: 9998;
 	}
-	.widget.feature.bk-tpl-hidden + .bk-header {
-        background: lighten(@color-swatch6, 5%);
-        padding: 30px;
-        position: relative;
-        width: 100%;
-        @media @mobile {
+	.widget.feature.bk-tpl-hidden+.bk-header {
+		background: lighten(@color-swatch6, 5%);
+		padding: 30px;
+		position: relative;
+		width: 100%;
+		@media @mobile {
 			padding: 25px 30px 15px;
 		}
-    }
+	}
 	#main {
 		padding-top: 0;
 	}
@@ -111,7 +87,7 @@ hr.line {
 	padding: 30px;
 	width: 100%;
 	@media @mobile {
-	    width: 90%;
+		width: 90%;
 		padding: 25px 30px 15px;
 	}
 }
@@ -123,23 +99,29 @@ hr.line {
 	right: -320px;
 	width: 320px;
 	.transition( all, 0.5s, ease);
-    z-index: 9999;
-    .widget.socialicons {
-    	float: left;
-    	padding: 30px 15px;
-    	margin: 0;
-    	width: 100%;
-    }
+	z-index: 9999;
+	.widget.socialicons {
+		float: left;
+		padding: 30px 15px;
+		margin: 0;
+		width: 100%;
+	}
 	@media only screen and (max-height: 450px) {
 		height: auto;
 	}
-    @media @mobile {
-    	right: -250px;
-    	width: 250px;
-    }
+	@media @mobile {
+		right: -250px;
+		width: 250px;
+	}
 }
 
+.menu-active .bk-nav .profile {
+	padding: 0 35px 30px;
+}
 
+.menu-active .bk-nav .profile .bk-profile-socialicons {
+	margin: 0;
+}
 
 .contain {
 	padding: 40px;
@@ -152,20 +134,20 @@ hr.line {
 
 #main {
 	display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    .border-radius(0px);
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	.border-radius(0px);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
+.bk-pt-home #main .widget.feature.bk-tpl-hidden+.bk-header {
 	background: @color-swatch1;
 	padding: 30px;
 	position: relative;
@@ -173,14 +155,9 @@ hr.line {
 	width: 100%;
 }
 
-
-
 // -----------------------------
 // 4. #FOOTER
 // -----------------------------
-
-
-
 .bk-footer {
 	.copyright {
 		.contain {
@@ -197,14 +174,11 @@ hr.line {
 	}
 }
 
-.bk-footer .widget.profile .bk-profile-socialicons span a, .bk-footer .widget.profile .bk-profile-socialicons span a:hover {
+.bk-footer .widget.profile .bk-profile-socialicons span a,
+.bk-footer .widget.profile .bk-profile-socialicons span a:hover {
 	background-color: @color-swatch2;
 }
 
 .widget.profile .bk-profile-socialicons span {
 	padding: 3px;
 }
-
-
-
-

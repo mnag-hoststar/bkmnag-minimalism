@@ -5,7 +5,7 @@
 	<div class="bk-pt-home">
 		<nav class="bk-nav" id="nav">
 			{{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
-			{{widget('socialicons', 'social', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+        	{{widget('profile', 'socialicons', {"profileType":"socialicons"})|raw}}
 		</nav>
 		<div role="main" id="main">
 				{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true, 'align':'left'})|raw}}

@@ -1,51 +1,36 @@
 // --------------------------------------
 // BaseKit Standard Theme: LESS > Widgets
 // --------------------------------------
-
-
 // -----------------------------
 // #Table of Contents
 // -----------------------------
-
-
 //  1.   #LOGO
 //  2.   #COMPANY NAME
 //  3.   #NAVIGATION
 //  4.   #FEATURE
-
 //  5.   #IMAGES
 //  6.   #GALLERY
 //  7.   #SLIDESHOW
-
 //  8.   #BUTTONS
 //  8.1  -- #STANDARD
 //  8.2  -- #TWEET
 //  8.3  -- #DROPBOX
 //  8.4  -- #CLICK TO CALL
 //  8.5  -- #PAYPAL
-
 //  9.   #FORMS
-
 // 10.   #SOCIAL ICONS
 // 11.   #TWITTER FEED
-
 // 12.   #DIVIDER (KEYLINE)
 // 13.   #PROFILE
 // 14.   #MAP
 // 15.   #YELP
-
-
-
-
 //  -----------------------------
 //  1.   #LOGO
 //  2.   #COMPANY NAME
 //  -----------------------------
-
-
-
 .widget {
-	&.logo, &.companyname {
+	&.logo,
+	&.companyname {
 		display: table-cell;
 	}
 	&.logo {
@@ -63,8 +48,8 @@
 		}
 	}
 	&.companyname {
-	    padding-left: 10px;
-	    padding-top: 5px;
+		padding-left: 10px;
+		padding-top: 5px;
 		//white-space: nowrap;
 		@media @mobile {
 			max-width: 80%;
@@ -82,98 +67,101 @@
 	}
 }
 
-
-
 //  -----------------------------
 //  3.   #NAVIGATION
 //  -----------------------------
-
-
-
-.widget.extendednavigation {
+.bk-nav .widget.extendednavigation {
 	background: @color-swatch1;
-	float: left;
+	float: none;
 	padding: 30px 15px;
 	width: 100%;
-    ul {
-        display: block;
-        padding: 0;
-        list-style: none;
-        width: 100%;
-        @media @tablet {
-        	display: block;
-        }
-        li {
-            display: block;
-            padding: 10px 0;
-            cursor: pointer;
-            &:before {
-	            display: inline-block;
-	            text-decoration: inherit;
-	            width: 1em;
-	            color: white;
-	            margin-right: 12px;
-	            text-align: center;
-	            font-variant: normal;
-	            font-size: 0.75em;
-	            text-transform: none;
-	            line-height: 1em;
-        	}
-            &:hover { 
-            	.transition( all, 0.5s, ease);
-            	ul {
-            		color: @color-swatch3;
-            		background: transparent;
-            		border: 2px solid lighten(@color-swatch2, 10%);
-            		position: relative;
-            		margin-left: 20px;
-            		margin-top: 8px;
-            		width: 90%;
-            		li {
-            			padding: 12px 6px;
-            			&:first-child {
-            				padding-top: 20px;
-            			}
-            			&:last-child {
-            				padding-bottom: 20px;
-            			}
-            			a {
-            				padding-left: 15px;
-            			}
-            		}
-            		.text {
-            			font-size: bkscale(@font-swatch6-font-size, 0.90);
-            		}
-            	}
-            }
-            ul {
+	.extendednavigation {
+		float: none;
+	}
+	ul {
+		display: block;
+		padding: 0;
+		list-style: none;
+		width: 100%;
+		@media @tablet {
+			display: block;
+		}
+		&.align-left,
+		&.align-right,
+		&.align-center {
+			float: none;
+		}
+		li {
+			display: block;
+			padding: 10px 0;
+			cursor: pointer;
+			&:before {
+				display: inline-block;
+				text-decoration: inherit;
+				width: 1em;
+				color: white;
+				margin-right: 12px;
+				text-align: center;
+				font-variant: normal;
+				font-size: 0.75em;
+				text-transform: none;
+				line-height: 1em;
+			}
+			ul {
 				display: none;
 			}
-            @media @tablet {
-            	border-bottom: none;
-            }
-            &.folder {
-            	color: @font-swatch6-color;
-            	&:after {
-            		border-top-color: lighten(@color-swatch5, 32%);
-            		top: 22px;
-            	}
-            	.text {
-            		color: @font-swatch6-color;
-            	}
-	        }
-	        a {
-	        	&:hover {
-	        		color: @font-swatch6-color-hover;
-	        	}
-	        }
-        }
-
-    }
+			&:hover {
+				.transition( all, 0.5s, ease);
+				ul {
+					display: block;
+					color: @color-swatch3;
+					background: transparent;
+					border: 2px solid lighten(@color-swatch2, 10%);
+					position: relative;
+					margin-left: 20px;
+					margin-top: 8px;
+					width: 90%;
+					li {
+						padding: 12px 6px;
+						&:first-child {
+							padding-top: 20px;
+						}
+						&:last-child {
+							padding-bottom: 20px;
+						}
+						a {
+							padding-left: 15px;
+						}
+					}
+					.text {
+						font-size: bkscale(@font-swatch6-font-size, 0.90);
+					}
+				}
+			}
+			@media @tablet {
+				border-bottom: none;
+			}
+			&.folder {
+				color: @font-swatch6-color;
+				&:after {
+					border-top-color: lighten(@color-swatch5, 32%);
+					top: 22px;
+				}
+				.text {
+					color: @font-swatch6-color;
+				}
+			}
+			a {
+				&:hover {
+					color: @font-swatch6-color-hover;
+				}
+			}
+		}
+	}
 	a.pull {
 		position: absolute;
 		right: 345px;
-		top: 30px; 
+		top: 30px;
 		display: inline-block;
 		width: 42px;
 		height: 38px;
@@ -181,14 +169,14 @@
 		cursor: pointer;
 		outline: none;
 		.transition(all, 0.5s, ease);
-	    @media @mobile {
-	    	right: 270px;
-	    	top: 20px;
-	    }
-	    &:hover {
-	    	//background-color: fade(@color-swatch1, 25%);
-	    	.transition(all, 0.5s, ease);
-	    }
+		@media @mobile {
+			right: 270px;
+			top: 20px;
+		}
+		&:hover {
+			//background-color: fade(@color-swatch1, 25%);
+			.transition(all, 0.5s, ease);
+		}
 		&:after {
 			content: '';
 			position: absolute;
@@ -207,60 +195,58 @@
 	}
 }
 
-div.widget .extendednavigation ul, div.widget.extendednavigation ul {
+div.widget .extendednavigation ul,
+div.widget.extendednavigation ul {
 	display: block;
 	li {
-		display: block; 
+		display: block;
 	}
 }
 
-div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
+div.widget .extendednavigation>ul,
+div.widget.extendednavigation>ul {
 	display: block!important;
 }
 
-.menu-active .widget.extendednavigation#slide-menu { 
-	right: 0px; 
+.menu-active .widget.extendednavigation#slide-menu {
+	right: 0px;
 }
 
-.menu-active #main, .menu-active .bk-header { 
-	right: 320px; 
+.menu-active #main,
+.menu-active .bk-header {
+	right: 320px;
 	.transition(all, 0.5s, ease);
-    -webkit-backface-visibility: hidden;
-    @media @mobile {
-    	right: 250px;
-    }
+	-webkit-backface-visibility: hidden;
+	@media @mobile {
+		right: 250px;
+	}
 }
 
-#main, .bk-header, .bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
+#main,
+.bk-header,
+.bk-pt-home #main .widget.feature.bk-tpl-hidden+.bk-header {
 	.transition(all, 0.5s, ease);
 	-webkit-backface-visibility: hidden;
 }
 
-.menu-active .bk-nav { 
+.menu-active .bk-nav {
 	display: table;
 	height: 100%;
 	position: absolute;
-	right: 0; 
+	right: 0;
 	.transition(all, 0.5s, ease);
 }
-
-
-
-
 
 //  -----------------------------
 //  4.   #FEATURE
 //  -----------------------------
-
-
-
 .widget.feature {
 	border-right: 1px solid darken(@color-swatch6, 50%);
 	height: 100%;
 }
 
 .widget.feature .feature-bgimg {
-    min-height: 100%;
+	min-height: 100%;
 }
 
 .widget.feature .feature-bgimg .content {
@@ -318,8 +304,8 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 		}
 	}
 	h3 {
-        text-transform: uppercase;
-        letter-spacing: 1px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
 		@media @mobile {
 			font-size: bkscale(@font-swatch5-font-size, 0.95);
 			line-height: bkscale(@font-swatch5-line-height, 0.75);
@@ -353,15 +339,9 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	} */
 }
 
-
-
-
 //  -----------------------------
 //  6.   #GALLERY
 //  -----------------------------
-
-
-
 .widget.gallery ul li span.inner {
 	.title {
 		color: @color-swatch1;
@@ -384,28 +364,25 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 }
 
 .widget.gallery .inner:hover .image-data {
-	.transition(opacity, 0.5s, ease );
+	.transition(opacity, 0.5s, ease);
 	opacity: 1;
 }
-
 
 //  -----------------------------
 //  7.   #SLIDESHOW
 //  -----------------------------
-
-
 .widget {
 	&.responsiveslideshow {
 		margin-top: 20px;
 		.slideshow-widget-controls {
 			.dot {
-			    width: 10px;
-			    height: 10px;
-			    margin: 3px;
+				width: 10px;
+				height: 10px;
+				margin: 3px;
 				background-color: @color-swatch7;
 				.border-radius(100px);
 				&.selected {
-				    border: 0;
+					border: 0;
 					background-color: @color-swatch2;
 				}
 			}
@@ -427,7 +404,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 			}
 			span {
 				color: @color-swatch5;
-				padding: 20px 4px 0 10px; 
+				padding: 20px 4px 0 10px;
 				@media @mobile {
 					padding-right: 10px;
 				}
@@ -464,7 +441,8 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 					line-height: 80px;
 				}
 			}
-			.btn-prev, .btn-next {
+			.btn-prev,
+			.btn-next {
 				background-color: fade(@color-swatch1, 65%);
 				top: 15px;
 				font-family: @font-swatch7-font-family;
@@ -515,52 +493,50 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	}
 }
 
-
-
-
-
 //  -----------------------------
 //  8.   #BUTTONS
 //  -----------------------------
-
-
 button.btn,
-.contactform button, .contactform button.btn, 
-.advancedcontactform button, .advancedcontactform button.btn,
+.contactform button,
+.contactform button.btn,
+.advancedcontactform button,
+.advancedcontactform button.btn,
 .widget.button button,
 .widget.profile form button,
 .widget.signupform fieldset button,
 .widget.blogsearch button,
 .widget.ecomproductslist .productlist-display-form .form-group button,
 .widget.ecomproduct .ecom-product .btn,
-.tweet a, .dropbox button, .paypalbuynow input[type=submit].widget, .btn, 
+.tweet a,
+.dropbox button,
+.paypalbuynow input[type=submit].widget,
+.btn,
 .widget.feature .feature-bgimg .content button,
 .widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
 	padding: 10px 30px;
 	border: 0;
 	border-radius: 0;
-    background-color: @font-swatch7-background-color;
-    font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
-    font-weight: @font-swatch7-font-weight;
-    line-height: @font-swatch7-line-height;
-    color:@font-swatch7-color;
-    letter-spacing: @font-swatch7-letter-spacing;
-    text-decoration: none;
+	background-color: @font-swatch7-background-color;
+	font-family: @font-swatch7-font-family;
+	font-size: @font-swatch7-font-size;
+	font-weight: @font-swatch7-font-weight;
+	line-height: @font-swatch7-line-height;
+	color: @font-swatch7-color;
+	letter-spacing: @font-swatch7-letter-spacing;
+	text-decoration: none;
 	text-transform: uppercase;
 	.transition(all, .5s, ease-out);
 	&:hover {
-	    background-color: @font-swatch7-background-color-hover;
-	    .transition(all, 0.75s, ease);
-	    cursor: pointer;
-    }
-    @media @mobile {
-    	width: 100%;
-    }
+		background-color: @font-swatch7-background-color-hover;
+		.transition(all, 0.75s, ease);
+		cursor: pointer;
+	}
+	@media @mobile {
+		width: 100%;
+	}
 }
 
-
-.widget.paypalbuynow .widget.button.paypal, 
+.widget.paypalbuynow .widget.button.paypal,
 .widget.dropbox button,
 .widget.tweet a {
 	color: @font-swatch7-color;
@@ -579,44 +555,45 @@ button.btn,
 	}
 }
 
-.widget.paypalbuynow .widget.button.paypal, .widget.paypalbuynow .widget.button.paypal:hover {
+.widget.paypalbuynow .widget.button.paypal,
+.widget.paypalbuynow .widget.button.paypal:hover {
 	background-image: image('/images/ic-paypal.svg');
 }
 
-.widget.dropbox button, .widget.dropbox button:hover  {
+.widget.dropbox button,
+.widget.dropbox button:hover {
 	background-image: image('/images/ic-dropbox.svg');
 }
 
-.widget.tweet a, .widget.tweet a:hover {
+.widget.tweet a,
+.widget.tweet a:hover {
 	background-image: image('/images/ic-tweet.svg');
 }
-
-
-
 
 //  -----------------------------
 //  9.   #FORMS
 //  -----------------------------
-
-
-
-input, textarea,
-.contactform input, .contactform textarea,
-.widget.profile form fieldset input, a.checkout-empty-link,
+input,
+textarea,
+.contactform input,
+.contactform textarea,
+.widget.profile form fieldset input,
+a.checkout-empty-link,
 .blogsearch input,
 .signupform fieldset input,
 .productlist-search input {
 	background-color: @color-swatch7;
-    border: 1px solid darken(@color-swatch1, 10%);
+	border: 1px solid darken(@color-swatch1, 10%);
 	text-indent: 8px;
 	-webkit-appearance: none;
 	border-radius: 0;
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		border: 1px solid darken(@color-swatch1, 20%);
 		.transition(ease, .5s, border);
 	}
 	@media @mobile {
-	    width: 100%;
+		width: 100%;
 	}
 }
 
@@ -629,9 +606,9 @@ textarea {
 	resize: vertical;
 }
 
-
 label,
-.contactform label, .advancedcontactform label,
+.contactform label,
+.advancedcontactform label,
 .signupform label,
 .ecom-product-vartitle {
 	font-family: @font-swatch4-font-family;
@@ -649,7 +626,8 @@ select {
 	padding-right: 33px;
 }
 
-select, input[type=search] {
+select,
+input[type=search] {
 	background-color: @color-swatch7;
 	font-family: @font-swatch5-font-family;
 	font-size: @font-swatch5-font-size;
@@ -670,8 +648,10 @@ select, input[type=search] {
 	height: 40px;
 }
 
-.advancedcontactform .option-item input[type="radio"], .advancedcontactform .option-item input[type="checkbox"], 
-.advancedcontactform .option-item .label--radio, .advancedcontactform .option-item .label--checkbox {
+.advancedcontactform .option-item input[type="radio"],
+.advancedcontactform .option-item input[type="checkbox"],
+.advancedcontactform .option-item .label--radio,
+.advancedcontactform .option-item .label--checkbox {
 	font-family: @font-swatch5-font-family;
 	font-size: @font-swatch5-font-size;
 	text-transform: none;
@@ -682,15 +662,14 @@ select, input[type=search] {
 }
 
 .widget {
-    &.contactform {
-    	label {
-    	}
-    	button {
-    	    @media @mobile {
-    	        width: 100%;
-    	    }
-    	}
-        /* input, textarea {
+	&.contactform {
+		label {}
+		button {
+			@media @mobile {
+				width: 100%;
+			}
+		}
+		/* input, textarea {
             border: 1px solid darken(@color-swatch2, 2%);
             border-radius: 0;
             &.email {
@@ -699,52 +678,50 @@ select, input[type=search] {
                 }
             }
         } */
-    }
-    &.profile {
-        form {
-            button {
-                @media @mobile {
-                    width: 100%;
-                    margin-top: 20px;
-                }
-            }
-        }
-    }
-    &.signupform fieldset {
-        button {
-            @media @mobile {
-                width: 100%;
-                margin-top: 20px;
-            }
-        }
-    }
-    &.blogsearch {
-        margin: 10px 0;
-        label {
-        	display: block;
-        }
-        button {
-            @media @mobile {
-                width: 100%;
-                margin-top: 20px;
-            }
-        }
-    }
+	}
+	&.profile {
+		form {
+			button {
+				@media @mobile {
+					width: 100%;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	&.signupform fieldset {
+		button {
+			@media @mobile {
+				width: 100%;
+				margin-top: 20px;
+			}
+		}
+	}
+	&.blogsearch {
+		margin: 10px 0;
+		label {
+			display: block;
+		}
+		button {
+			@media @mobile {
+				width: 100%;
+				margin-top: 20px;
+			}
+		}
+	}
 }
-
 
 //  -----------------------------
 //  10.   #SOCIAL ICONS
 //  -----------------------------
-
-
-.widget.socialicons, .widget.profile .bk-profile-socialicons {
+.widget.socialicons,
+.widget.profile .bk-profile-socialicons {
 	margin: 2em 0 1em;
 	//text-align: center;
-    span a {
+	span a {
 		background-color: @font-swatch7-background-color;
 		.transition(all, .5s, ease-out);
-		&:hover{
+		&:hover {
 			background-color: @font-swatch7-background-color-hover;
 			.transition(all, 0.75s, ease);
 		}
@@ -784,14 +761,9 @@ select, input[type=search] {
 	}
 }
 
-
-
 //  -----------------------------
 //  11.   #TWITTER FEED
 //  -----------------------------
-
-
-
 .widget.twitter {
 	margin: 20px 0;
 	img {
@@ -800,9 +772,9 @@ select, input[type=search] {
 	p {
 		color: @color-swatch4;
 		padding: 0;
-	}	
+	}
 	li {
-		border-bottom: darken(@color-swatch1,10%);
+		border-bottom: darken(@color-swatch1, 10%);
 	}
 	ul li a:hover {
 		text-decoration: none;
@@ -821,7 +793,10 @@ select, input[type=search] {
 		//float: left;
 		//margin-top: 5px;
 		.bk-full-name,
-		a, p a, span, a .bk-full-name {
+		a,
+		p a,
+		span,
+		a .bk-full-name {
 			color: @font-swatch4-color;
 			font-family: @font-swatch4-font-family;
 			font-size: @font-swatch4-font-size;
@@ -829,7 +804,8 @@ select, input[type=search] {
 			letter-spacing: @font-swatch4-letter-spacing;
 		}
 		// Tweet Link
-		p a, a:hover span.bk-full-name {
+		p a,
+		a:hover span.bk-full-name {
 			color: lighten(@color-swatch5, 5%);
 			text-decoration: none;
 		}
@@ -850,10 +826,9 @@ select, input[type=search] {
 		span {
 			font-weight: inherit;
 		}
-		span, span a {
+		span,
+		span a {
 			font-size: 13px;
 		}
 	}
 }
-
-
