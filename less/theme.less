@@ -62,7 +62,7 @@ hr.line {
 	&.language-selector--horizontal,
 	&.language-selector--dropdown {
 		position: absolute;
-		top: 0;
+		top: 5px;
 		right: 90px;
 		left: 0;
 		z-index: 200;
@@ -77,6 +77,11 @@ hr.line {
         -ms-transition: opacity 0.3s ease 0.4s;
         -o-transition: opacity 0.3s ease 0.4s;
         transition: opacity 0.3s ease 0.4s;
+	    
+		@media @tablet {
+    		top: 80px;
+    		right: 34px;
+		}
 	}
 	&.language-selector--light,
 	&.language-selector--dark {
@@ -105,7 +110,7 @@ hr.line {
 	}
 	
 	&.language-selector--menu-open {
-	    right: 410px;
+	    right: 354px;
 	    
 		@media @tablet {
 		    height: 0;
@@ -388,10 +393,9 @@ hr.line {
 // -----------------------------
 .widget.feature+.bk-header {
 	background: transparent;
-	//padding: 65px 0 30px 30px;
 	position: absolute;
 	top: 0;
-	z-index: 9998;
+	z-index: 100;
 }
 .widget.feature.bk-tpl-hidden+.bk-header {
 	background: lighten(@color-swatch6, 5%);
@@ -437,8 +441,7 @@ hr.line {
 	padding: 30px;
 	width: 100%;
 	@media @mobile {
-		width: 90%;
-		padding: 25px 30px 15px;
+		padding: 30px 80px 30px 30px;
 	}
 }
 
@@ -449,7 +452,7 @@ hr.line {
 	right: -320px;
 	width: 320px;
 	.transition( all, 0.5s, ease);
-	z-index: 100;
+	z-index: 200;
 	.widget.socialicons {
 		float: left;
 		padding: 30px 15px;
@@ -465,11 +468,11 @@ hr.line {
 	}
 }
 
-.menu-active .bk-nav .profile {
+.bk-nav .profile {
 	padding: 0 35px 30px;
 }
 
-.menu-active .bk-nav .profile .bk-profile-socialicons {
+.bk-nav .profile .bk-profile-socialicons {
 	margin: 0;
 }
 

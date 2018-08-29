@@ -212,16 +212,6 @@ div.widget.extendednavigation>ul {
 	right: 0px;
 }
 
-.menu-active #main,
-.menu-active .bk-header {
-	right: 320px;
-	.transition(all, 0.5s, ease);
-	-webkit-backface-visibility: hidden;
-	@media @mobile {
-		right: 250px;
-	}
-}
-
 #main,
 .bk-header,
 .bk-pt-home #main .widget.feature.bk-tpl-hidden+.bk-header {
@@ -232,7 +222,7 @@ div.widget.extendednavigation>ul {
 .menu-active .bk-nav {
 	display: table;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	right: 0;
 	.transition(all, 0.5s, ease);
 }
