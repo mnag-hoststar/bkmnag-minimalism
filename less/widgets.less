@@ -28,6 +28,7 @@
 //  1.   #LOGO
 //  2.   #COMPANY NAME
 //  -----------------------------
+
 .widget {
 	&.logo,
 	&.companyname {
@@ -70,6 +71,7 @@
 //  -----------------------------
 //  3.   #NAVIGATION
 //  -----------------------------
+
 .bk-nav .widget.extendednavigation {
 	background: @color-swatch1;
 	float: none;
@@ -111,7 +113,7 @@
 				display: none;
 			}
 			&:hover {
-				.transition( all, 0.5s, ease);
+				.transition(all 0.5s ease);
 				ul {
 					display: block;
 					color: @color-swatch3;
@@ -168,14 +170,14 @@
 		overflow: hidden;
 		cursor: pointer;
 		outline: none;
-		.transition(all, 0.5s, ease);
+		.transition(all 0.5s ease);
 		@media @mobile {
 			right: 270px;
 			top: 20px;
 		}
 		&:hover {
 			//background-color: fade(@color-swatch1, 25%);
-			.transition(all, 0.5s, ease);
+			.transition(all 0.5s ease);
 		}
 		&:after {
 			content: '';
@@ -215,7 +217,7 @@ div.widget.extendednavigation>ul {
 #main,
 .bk-header,
 .bk-pt-home #main .widget.feature.bk-tpl-hidden+.bk-header {
-	.transition(all, 0.5s, ease);
+	.transition(all 0.5s ease);
 	-webkit-backface-visibility: hidden;
 }
 
@@ -224,7 +226,11 @@ div.widget.extendednavigation>ul {
 	height: 100%;
 	position: fixed;
 	right: 0;
-	.transition(all, 0.5s, ease);
+	.transition(all 0.5s ease);
+	
+	@media @mobile {
+		width: 100%;
+	}
 }
 
 //  -----------------------------
@@ -303,32 +309,6 @@ div.widget.extendednavigation>ul {
 			line-height: bkscale(@font-swatch5-line-height, 0.75);
 		}
 	}
-	/* button {
-		//border: 1px solid white;
-		//border-bottom-style: double;
-		background-color: @font-swatch7-background-color;
-		color: @font-swatch7-color;
-		text-transform: uppercase;
-		padding: 10px 25px 10px;
-		margin-top: 15px;
-		border-radius: 0;
-		.transition(all, .5s, ease-out);
-		&:hover {
-			background-color: @font-swatch7-background-color-hover;
-			.transition(all, 0.75s, ease);
-			span {
-				color: @font-swatch7-color-hover;
-			}
-		}
-		@media @mobile {
-			padding: 8px 20px;
-			margin-top: 10px;
-		}
-		span {
-			color: @font-swatch7-color;
-			vertical-align: middle;
-		}
-	} */
 }
 
 //  -----------------------------
@@ -356,7 +336,7 @@ div.widget.extendednavigation>ul {
 }
 
 .widget.gallery .inner:hover .image-data {
-	.transition(opacity, 0.5s, ease);
+	.transition(opacity 0.5s ease);
 	opacity: 1;
 }
 
@@ -423,7 +403,7 @@ div.widget.extendednavigation>ul {
 				}
 				&:hover {
 					background-color: fade(@color-swatch1, 85%);
-					transition: all .5s ease;
+					.transition(all .5s ease);
 				}
 				&:after {
 					font-size: 28px;
@@ -517,10 +497,10 @@ button.btn,
 	letter-spacing: @font-swatch7-letter-spacing;
 	text-decoration: none;
 	text-transform: uppercase;
-	.transition(all, .5s, ease-out);
+	.transition(all .5s ease-out);
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
-		.transition(all, 0.75s, ease);
+		.transition(all 0.75s ease);
 		cursor: pointer;
 	}
 	@media @mobile {
@@ -537,10 +517,10 @@ button.btn,
 	padding: 12px 30px 12px 50px;
 	display: inline-block;
 	text-align: center;
-	.transition(all, .5s, ease-out);
+	.transition(all .5s ease-out);
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
-		.transition(all, 0.75s, ease);
+		.transition(all 0.75s ease);
 	}
 	@media @mobile {
 		width: 100%;
@@ -582,7 +562,7 @@ a.checkout-empty-link,
 	&:hover,
 	&:focus {
 		border: 1px solid darken(@color-swatch1, 20%);
-		.transition(ease, .5s, border);
+		.transition(ease .5s border);
 	}
 	@media @mobile {
 		width: 100%;
@@ -631,10 +611,7 @@ input[type=search] {
 	width: 100%;
 	padding: 8px 10px 10px;
 	outline: none;
-	-webkit-transition: border .2s;
-	-moz-transition: border .2s;
-	-ms-transition: border .2s;
-	transition: border .2s;
+	.transition(border .2s);
 	border: 1px solid darken(@color-swatch1, 10%);
 	border-radius: 0;
 	height: 40px;
@@ -655,21 +632,11 @@ input[type=search] {
 
 .widget {
 	&.contactform {
-		label {}
 		button {
 			@media @mobile {
 				width: 100%;
 			}
 		}
-		/* input, textarea {
-            border: 1px solid darken(@color-swatch2, 2%);
-            border-radius: 0;
-            &.email {
-                @media @mobile {
-                    width: 70%;
-                }
-            }
-        } */
 	}
 	&.profile {
 		form {
@@ -712,10 +679,10 @@ input[type=search] {
 	//text-align: center;
 	span a {
 		background-color: @font-swatch7-background-color;
-		.transition(all, .5s, ease-out);
+		.transition(all .5s ease-out);
 		&:hover {
 			background-color: @font-swatch7-background-color-hover;
-			.transition(all, 0.75s, ease);
+			.transition(all 0.75s ease);
 		}
 	}
 }
