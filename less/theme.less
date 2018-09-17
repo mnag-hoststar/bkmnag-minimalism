@@ -440,7 +440,7 @@ hr.line {
 
 	.open + a.pull {
 		top: 10px;
-		left: 15px;
+		left: 25px;
 		right: auto;
 		
 		&:after {
@@ -464,13 +464,14 @@ hr.line {
 }
 
 .bk-nav {
+	position: fixed;
+	z-index: 200;
+	right: -320px;
 	background: @color-swatch1;
 	height: 100%;
-	position: fixed;
-	right: -320px;
 	width: 320px;
 	.transition(all 0.5s ease);
-	z-index: 200;
+	margin-top: 30px;
 	.widget.socialicons {
 		float: left;
 		padding: 30px 15px;
