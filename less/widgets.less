@@ -25,6 +25,8 @@
 // 14.   #MAP
 // 15.   #YELP
 //  -----------------------------
+
+//  -----------------------------
 //  1.   #LOGO
 //  2.   #COMPANY NAME
 //  -----------------------------
@@ -236,6 +238,7 @@ div.widget.extendednavigation>ul {
 //  -----------------------------
 //  4.   #FEATURE
 //  -----------------------------
+
 .widget.feature {
 	border-right: 1px solid darken(@color-swatch6, 50%);
 	min-height: 100%;
@@ -314,6 +317,7 @@ div.widget.extendednavigation>ul {
 //  -----------------------------
 //  6.   #GALLERY
 //  -----------------------------
+
 .widget.gallery ul li span.inner {
 	.title {
 		color: @color-swatch1;
@@ -343,6 +347,7 @@ div.widget.extendednavigation>ul {
 //  -----------------------------
 //  7.   #SLIDESHOW
 //  -----------------------------
+
 .widget {
 	&.responsiveslideshow {
 		margin-top: 20px;
@@ -468,6 +473,7 @@ div.widget.extendednavigation>ul {
 //  -----------------------------
 //  8.   #BUTTONS
 //  -----------------------------
+
 button.btn,
 .contactform button,
 .contactform button.btn,
@@ -545,6 +551,7 @@ button.btn,
 //  -----------------------------
 //  9.   #FORMS
 //  -----------------------------
+
 input,
 textarea,
 .contactform input,
@@ -670,9 +677,46 @@ input[type=search] {
 	}
 }
 
+// Privacy Checkboxes
+
+.widget.advancedcontactform .form-group.advancedcontactform__form-group--terms,
+.widget.contactform .form-group.contactform__form-group--terms,
+.widget.signupform .form-group.signupform__form-group--terms {
+	input[type="checkbox"] {
+		opacity: 1;
+		margin: 4px 8px 4px 4px;
+		padding: 0;
+		min-height: auto;
+		min-width: auto;
+		height: auto !important;
+		width: auto !important;
+		line-height: 1em;
+		-webkit-appearance: checkbox;
+		-moz-appearance: checkbox;
+		appearance: checkbox;
+	}
+	
+	label {
+		padding-bottom: 0;
+		
+		&:before {
+			display: none;
+		}
+		
+		.form__link {
+			font-family:@font-swatch5-font-family;
+			font-size:@font-swatch5-font-size;
+			font-weight:@font-swatch5-font-weight;
+			line-height:@font-swatch5-line-height;
+			letter-spacing: @font-swatch5-letter-spacing;
+		}
+	}
+}
+
 //  -----------------------------
 //  10.   #SOCIAL ICONS
 //  -----------------------------
+
 .widget.socialicons,
 .widget.profile .bk-profile-socialicons {
 	margin: 2em 0 1em;
@@ -723,6 +767,7 @@ input[type=search] {
 //  -----------------------------
 //  11.   #TWITTER FEED
 //  -----------------------------
+
 .widget.twitter {
 	margin: 20px 0;
 	img {
