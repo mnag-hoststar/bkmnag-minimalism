@@ -27,7 +27,6 @@
 	h1 {
 		font-family: @font-swatch2-font-family;
 		font-size: bkscale(@font-swatch2-font-size, 1.2);
-		//line-height: bkscale(@font-swatch2-line-height, 1.2);
 		padding-bottom: 18px;
 	}
 }
@@ -266,6 +265,7 @@
 		}
 	}
 	.ecom-productslist-image-wrap {
+		background-color: transparent;
 		margin-bottom: 20px;
 	}
 	.ecom-productlist-info {
@@ -278,8 +278,11 @@
 	}
 }
 
-.productlist-display-form,
-.productlist-item-count {
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
+	background-color: transparent;
+}
+
+.productlist-display-form {
 	select {
 		color: @font-swatch5-color;
 		font-size: @font-swatch7-font-size;
@@ -287,7 +290,7 @@
 		line-height: 50px;
 		-webkit-appearance: menulist;
 		border: 1px solid darken(@color-swatch1, 10%);
-		padding: 14px 5px 14px 12px;
+		padding: 10px 5px 10px 12px;
 		@media @tablet {
 			background-position: 98% center;
 		}

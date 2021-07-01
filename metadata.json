@@ -3,6 +3,7 @@
     "thumbnail":"thumbnail.png",
     "screenshot":"minimalism-screenshot.jpg",
     "templateType":"standard",
+     "versionTenCompatible": 1,
     "pageTypes": ["home"],
     "tags": {
     "en": ["clean", "news", "fullscreen", "blog", "monochromatic", "minimalistic", "serif"],

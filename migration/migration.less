@@ -1,0 +1,92 @@
+
+// -------------------------------------------
+//  Migration Styles -
+//
+//  These changes allow rows to work with
+//  existing templates in BK10
+// -------------------------------------------
+
+
+
+// Template styling resets
+// ------------------------------------
+
+#migrated {
+	.contain {
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+    }
+
+    &.edit #nav .widget.extendednavigation a.pull {
+        right: 445px;
+
+        @media @mobile {
+            right: 262px;
+        }
+    }
+}
+
+
+
+// Row improvments
+// ------------------------------------
+
+#migrated {
+	.row--layout-hero-5a .signupform fieldset input {
+		width: auto;
+	}
+
+	.row--layout-gallery-rounded .widget.gallery .image-data {
+		text-align: center;
+        top: 0;
+	}
+
+    .row--layout-contact-5a [data-name="companyaddress"] {
+        text-align: center;
+    }
+}
+
+
+
+// Re-add the reset styles
+// ------------------------------------
+
+#migrated {
+
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    [data-name="row"] .row:not(.row--width-no-padding) .row__container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+        width: ~"calc(100% - 80px)";
+
+        @media @mobile {
+            width: ~"calc(100% - 20px)";
+        }
+    }
+
+    // Move spacing to first widget in the main zone (not sections)
+    .edit #page-zones__main-overlay + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 40px;
+    }
+
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 40px;
+    }
+
+    // Add spacing to the top of a widget when it follows a section
+    #page-zones__main > .row + .widget:not([data-name="row"]) {
+        margin-top: 20px;
+    }
+
+    // Empy zone spacing
+    &.edit #page-zones__main:empty {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+}

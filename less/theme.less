@@ -44,6 +44,25 @@
 // font8:  Feature Headline
 // font9:  Feature Strapline
 // font10: Company Name (Logo)
+h1, h2, h3, h4, h5, h6,
+[class*="contentgroup__h"],
+.blog-post-title a,
+blockquote:before,
+.widget.image .image-title,
+label {
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
+}
+
 h5 {
 	font-family: @font-swatch4-font-family;
 	font-size: @font-swatch5-font-size;
@@ -51,8 +70,56 @@ h5 {
 	line-height: @font-swatch5-line-height;
 }
 
+p, ul, ol, li,
+.contentgroup__body,
+.widget.clicktocall a,
+.widget.clicktocall a:hover,
+blockquote,
+.widget.image .image-description,
+.blog-post-published-date {
+    .style--light & {
+        color: fade(@contrast--light, 90%);
+    }
+
+    .style--accent & {
+        color: fade(@contrast--accent, 90%);
+    }
+
+    .style--dark & {
+        color: fade(@contrast--dark, 90%);
+    }
+}
+
+a,
+.ecom-productlist-price,
+.ecom-featuredproducts-price {
+	.style--light & {
+        color: @color--accent;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @color--accent;
+    }
+}
+
 hr.line {
 	background-color: lighten(@color-swatch5, 75%);
+
+	.style--light & {
+        background-color: darken(@color--light, 12%);
+    }
+
+    .style--accent & {
+        background-color: darken(@color--accent, 12%);
+    }
+
+    .style--dark & {
+        background-color: lighten(@color--dark, 15%);
+    }
 }
 
 // -----------------------------

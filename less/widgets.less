@@ -178,7 +178,6 @@
 			top: 20px;
 		}
 		&:hover {
-			//background-color: fade(@color-swatch1, 25%);
 			.transition(all 0.5s ease);
 		}
 		&:after {
@@ -272,10 +271,6 @@ div.widget.extendednavigation>ul {
 				line-height: bkscale(@font-swatch5-line-height, 0.80);
 				padding-bottom: 8px;
 			}
-			/*button {
-				padding: 15px 15px;
-				margin-top: 12px;
-			}*/
 		}
 		@media only screen and (max-width: 1000px) {
 			position: relative;
@@ -358,9 +353,34 @@ div.widget.extendednavigation>ul {
 				margin: 3px;
 				background-color: @color-swatch7;
 				.border-radius(100px);
+
+				.style--light & {
+			        background-color: darken(@color--light, 10%);
+			    }
+
+			    .style--accent & {
+			        background-color: darken(@color--accent, 10%);
+			    }
+
+			    .style--dark & {
+			        background-color: lighten(@color--dark, 15%);
+			    }
+
 				&.selected {
 					border: 0;
 					background-color: @color-swatch2;
+
+					.style--light & {
+				        background-color: @color--dark;
+				    }
+
+				    .style--accent & {
+				        background-color: @contrast--accent;
+				    }
+
+				    .style--dark & {
+				        background-color: @contrast--dark;
+				    }
 				}
 			}
 		}
@@ -490,7 +510,8 @@ button.btn,
 .paypalbuynow input[type=submit].widget,
 .btn,
 .widget.feature .feature-bgimg .content button,
-.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
+.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button,
+a.contentgroup__link {
 	padding: 10px 30px;
 	border: 0;
 	border-radius: 0;
@@ -504,10 +525,41 @@ button.btn,
 	text-decoration: none;
 	text-transform: uppercase;
 	.transition(all .5s ease-out);
+
+	.style--light & {
+		background-color: @color--dark;
+		color: @contrast--dark;
+	}
+
+	.style--accent & {
+		background-color: @color--dark;
+		color: @contrast--dark;
+	}
+
+	.style--dark & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+	}
+
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		.transition(all 0.75s ease);
 		cursor: pointer;
+
+		.style--light & {
+			background-color: darken(@color--dark, 5%);
+			color: @contrast--dark;
+		}
+
+		.style--accent & {
+			background-color: darken(@color--dark, 5%);
+			color: @contrast--dark;
+		}
+
+		.style--dark & {
+			background-color: darken(@color--accent, 5%);
+			color: @contrast--accent;
+		}
 	}
 	@media @mobile {
 		width: 100%;
@@ -524,9 +576,40 @@ button.btn,
 	display: inline-block;
 	text-align: center;
 	.transition(all .5s ease-out);
+
+	.style--light & {
+		background-color: @color--dark;
+		color: @contrast--dark;
+	}
+
+	.style--accent & {
+		background-color: @color--dark;
+		color: @contrast--dark;
+	}
+
+	.style--dark & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+	}
+
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		.transition(all 0.75s ease);
+
+		.style--light & {
+			background-color: darken(@color--dark, 5%);
+			color: @contrast--dark;
+		}
+
+		.style--accent & {
+			background-color: darken(@color--dark, 5%);
+			color: @contrast--dark;
+		}
+
+		.style--dark & {
+			background-color: darken(@color--accent, 5%);
+			color: @contrast--accent;
+		}
 	}
 	@media @mobile {
 		width: 100%;
@@ -566,10 +649,25 @@ a.checkout-empty-link,
 	text-indent: 8px;
 	-webkit-appearance: none;
 	border-radius: 0;
+
+	.style--light &,
+	.style--accent &,
+	.style--dark & {
+		background-color: @color--light;
+		border-color: darken(@color--light, 10%);
+		color: @contrast--light;
+	}
+
 	&:hover,
 	&:focus {
 		border: 1px solid darken(@color-swatch1, 20%);
 		.transition(ease .5s border);
+
+		.style--light &,
+		.style--accent &,
+		.style--dark & {
+			border-color: darken(@color--light, 20%);
+		}
 	}
 	@media @mobile {
 		width: 100%;
@@ -597,6 +695,18 @@ label,
 	color: @font-swatch5-color;
 	text-transform: uppercase;
 	padding-bottom: 5px;
+
+	.style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }
 
 select {
@@ -622,6 +732,14 @@ input[type=search] {
 	border: 1px solid darken(@color-swatch1, 10%);
 	border-radius: 0;
 	height: 40px;
+
+	.style--light &,
+	.style--accent &,
+	.style--dark & {
+		background-color: @color--light;
+		border-color: darken(@color--light, 10%);
+		color: @contrast--light;
+	}
 }
 
 .advancedcontactform .option-item input[type="radio"],
@@ -724,9 +842,34 @@ input[type=search] {
 	span a {
 		background-color: @font-swatch7-background-color;
 		.transition(all .5s ease-out);
+
+		.style--light & {
+	        background-color: @color--dark;
+	    }
+
+	    .style--accent & {
+	        background-color: @color--dark;
+	    }
+
+	    .style--dark & {
+	        background-color: @color--accent;
+	    }
+
 		&:hover {
 			background-color: @font-swatch7-background-color-hover;
 			.transition(all 0.75s ease);
+
+			.style--light & {
+				background-color: darken(@color--dark, 5%);
+			}
+
+			.style--accent & {
+				background-color: darken(@color--dark, 5%);
+			}
+
+			.style--dark & {
+				background-color: darken(@color--accent, 5%);
+			}
 		}
 	}
 }
@@ -776,9 +919,18 @@ input[type=search] {
 	p {
 		color: @color-swatch4;
 		padding: 0;
-	}
-	li {
-		border-bottom: darken(@color-swatch1, 10%);
+
+		.style--light & {
+	        color: fade(@contrast--light, 90%);
+	    }
+
+	    .style--accent & {
+	        color: fade(@contrast--accent, 90%);
+	    }
+
+	    .style--dark & {
+	        color: fade(@contrast--dark, 90%);
+	    }
 	}
 	ul li a:hover {
 		text-decoration: none;
@@ -788,14 +940,11 @@ input[type=search] {
 	}
 	// Tweet Content
 	.twitter-profile-pic {
-		@media @tablet {
-			//width: 100%;
+		@media @tablet {;
 			margin-right: 20px;
 		}
 	}
 	.twitter-content {
-		//float: left;
-		//margin-top: 5px;
 		.bk-full-name,
 		a,
 		p a,
@@ -806,22 +955,53 @@ input[type=search] {
 			font-size: @font-swatch4-font-size;
 			line-height: @font-swatch4-line-height;
 			letter-spacing: @font-swatch4-letter-spacing;
+
+			.style--light & {
+		        color: @contrast--light;
+		    }
+
+		    .style--accent & {
+		        color: @contrast--accent;
+		    }
+
+		    .style--dark & {
+		        color: @contrast--dark;
+		    }
 		}
 		// Tweet Link
 		p a,
 		a:hover span.bk-full-name {
 			color: lighten(@color-swatch5, 5%);
 			text-decoration: none;
+
+			.style--light & {
+		        color: lighten(@contrast--light, 5%);
+		    }
+
+		    .style--accent & {
+		        color: lighten(@contrast--accent, 5%);
+		    }
+
+		    .style--dark & {
+		        color: darken(@contrast--dark, 5%);
+		    }
 		}
-		p a:hover {
-			color: @color-swatch3;
-		}
+		p a:hover,
 		span a {
+			color: @color-swatch3;
 			text-decoration: none;
-			&:hover {
-				color: @color-swatch3;
-				text-decoration: none;
-			}
+
+			.style--light & {
+		        color: @color--accent;
+		    }
+
+		    .style--accent & {
+		        color: @color--dark;
+		    }
+
+		    .style--dark & {
+		        color: @contrast--dark;
+		    }
 		}
 		// Extra Info
 		time {
