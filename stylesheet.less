@@ -14,6 +14,12 @@
     border-radius: @radius;
 }
 
+.appearance(@appearance: none) {
+    -webkit-appearance: @appearance;
+    -moz-appearance: @appearance;
+    appearance: @appearance;
+}
+
 .transition (@transition...) {
 	-webkit-transition: @transition;
 	-moz-transition: @transition;

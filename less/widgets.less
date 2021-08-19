@@ -635,54 +635,6 @@ a.contentgroup__link {
 //  9.   #FORMS
 //  -----------------------------
 
-input,
-textarea,
-.contactform input,
-.contactform textarea,
-.widget.profile form fieldset input,
-a.checkout-empty-link,
-.blogsearch input,
-.signupform fieldset input,
-.productlist-search input {
-	background-color: @color-swatch7;
-	border: 1px solid darken(@color-swatch1, 10%);
-	text-indent: 8px;
-	-webkit-appearance: none;
-	border-radius: 0;
-
-	.style--light &,
-	.style--accent &,
-	.style--dark & {
-		background-color: @color--light;
-		border-color: darken(@color--light, 10%);
-		color: @contrast--light;
-	}
-
-	&:hover,
-	&:focus {
-		border: 1px solid darken(@color-swatch1, 20%);
-		.transition(ease .5s border);
-
-		.style--light &,
-		.style--accent &,
-		.style--dark & {
-			border-color: darken(@color--light, 20%);
-		}
-	}
-	@media @mobile {
-		width: 100%;
-	}
-}
-
-input {
-	height: 40px;
-}
-
-textarea {
-	height: 100px;
-	resize: vertical;
-}
-
 label,
 .contactform label,
 .advancedcontactform label,
@@ -709,14 +661,17 @@ label,
     }
 }
 
+input,
+input[type=search],
+textarea,
+.contactform input,
+.contactform textarea,
+.widget.profile form fieldset input,
+a.checkout-empty-link,
+.blogsearch input,
+.signupform fieldset input,
+.productlist-search input,
 select {
-	cursor: pointer;
-	position: relative;
-	padding-right: 33px;
-}
-
-select,
-input[type=search] {
 	background-color: @color-swatch7;
 	font-family: @font-swatch5-font-family;
 	font-size: @font-swatch5-font-size;
@@ -724,12 +679,13 @@ input[type=search] {
 	line-height: @font-swatch5-line-height;
 	color: @font-swatch5-color;
 	letter-spacing: @font-swatch5-letter-spacing;
-	text-indent: 0;
-	width: 100%;
-	padding: 8px 10px 10px;
-	outline: none;
-	.transition(border .2s);
 	border: 1px solid darken(@color-swatch1, 10%);
+	text-indent: 8px;
+	-webkit-appearance: none;
+	border-radius: 0;
+	border: 1px solid darken(@color-swatch1, 10%);
+	.transition(border .2s);
+	outline: none;
 	border-radius: 0;
 	height: 40px;
 
@@ -740,6 +696,46 @@ input[type=search] {
 		border-color: darken(@color--light, 10%);
 		color: @contrast--light;
 	}
+
+	&:hover,
+	&:focus {
+		border: 1px solid darken(@color-swatch1, 20%);
+		.transition(ease .5s border);
+
+		.style--light &,
+		.style--accent &,
+		.style--dark & {
+			border-color: darken(@color--light, 20%);
+		}
+	}
+	@media @mobile {
+		width: 100%;
+	}
+}
+
+textarea {
+	height: auto;
+}
+
+select {
+	padding-right: 2.2em;
+    width: 100%;
+    .appearance(none) !important;
+	background-image: url("data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNCAyNCI+Cgk8cG9seWxpbmUgc3Ryb2tlPSIjNzY3ODgwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiIHBvaW50cz0iMjAuMSw4LjYgMTIsMTYuNyAzLjksOC42IiAvPgo8L3N2Zz4=");
+    background-repeat: no-repeat;
+    background-position: right 0.5em center;
+    background-size: 1.2em;
+
+	&::-ms-expand {
+		display: none;
+	}
+}
+
+.contactform .option-item--radio,
+.contactform .option-item--checkbox,
+.advancedcontactform .option-item--radio,
+.advancedcontactform .option-item--checkbox {
+	display: flex;
 }
 
 .advancedcontactform .option-item input[type="radio"],
