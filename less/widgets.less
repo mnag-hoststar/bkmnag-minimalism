@@ -745,6 +745,16 @@ select {
 	font-family: @font-swatch5-font-family;
 	font-size: @font-swatch5-font-size;
 	text-transform: none;
+	word-break: break-word;
+}
+
+.widget .form {
+	.option-item--radio,
+	.option-item--checkbox {
+		label {
+			word-break: break-word;
+		}
+	}
 }
 
 .form-group {
