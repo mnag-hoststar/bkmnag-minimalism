@@ -639,13 +639,25 @@ hr.line {
 		.contain {
 			border-top: 1px solid lighten(@color-swatch5, 68%);
 			padding: 12px 40px;
+
+			@media @mobile {
+				padding: 12px 20px;
+			}
 		}
+
 		.widget.profile {
 			display: block;
-			width: 100%;
 			color: @font-swatch5-color;
 			padding: 30px 0;
 			text-align: center;
+	
+			form button {
+				word-break: break-word;
+				height: auto;
+				width: auto;
+				margin: 10px 0;
+				line-height: 1.25em;
+			}
 		}
 	}
 }
