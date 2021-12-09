@@ -243,81 +243,81 @@ div.widget.extendednavigation > ul {
 	border-right: 1px solid darken(@color-swatch6, 50%);
 	min-height: 100%;
 	min-height: 100vh;
-}
 
-.widget.feature .feature-bgimg {
-	min-height: 100%;
-	min-height: 100vh;
-}
+	.feature-bgimg {
+		min-height: 100%;
+		min-height: 100vh;
+	
+		.content {
+			padding: 100px 40px;
+			height: 100%;
+			text-align: center;
 
-.widget.feature .feature-bgimg .content {
-	padding: 100px 40px;
-	height: 100%;
-	text-align: center;
-
-	@media @mobile {
-		padding: 100px 20px;
-		-webkit-overflow-scrolling: touch;
-	}
-
-	.spare {
-		@media only screen and (max-height: 450px) {
-			position: relative;
-			top: 30px;
-
-			h2 {
-				font-size: bkscale(@font-swatch1-font-size, 0.62);
-				line-height: bkscale(@font-swatch1-line-height, 0.68);
-				padding-bottom: 8px;
+			@media @mobile {
+				padding: 100px 20px;
+				-webkit-overflow-scrolling: touch;
 			}
 
-			h3 {
-				font-size: bkscale(@font-swatch5-font-size, 0.85);
-				line-height: bkscale(@font-swatch5-line-height, 0.80);
-				padding-bottom: 8px;
+			.spare {
+				@media @mobile-small {
+					position: relative;
+					top: 30px;
+				}
+				
+				@media @desktop-smaller {
+					position: relative;
+				}
+
+				h2 {
+					padding-bottom: 12px;
+					letter-spacing: 3px;
+					text-transform: uppercase;
+
+					@media @mobile {
+						font-size: bkscale(@font-swatch1-font-size, 0.58);
+						line-height: bkscale(@font-swatch1-line-height, 0.75);
+					}
+
+					@media @mobile-small {
+						font-size: bkscale(@font-swatch1-font-size, 0.62);
+						line-height: bkscale(@font-swatch1-line-height, 0.68);
+						padding-bottom: 8px;
+					}
+
+					@media @mobile-smaller {
+						font-size: bkscale(@font-swatch1-font-size, 0.68);
+						line-height: bkscale(@font-swatch1-line-height, 0.75);
+					}
+
+					@media @desktop-smallest {
+						font-size: bkscale(@font-swatch1-font-size, 0.85);
+						line-height: bkscale(@font-swatch1-line-height, 0.85);
+						padding-bottom: 12px;
+					}
+				}
+
+				h3 {
+					text-transform: uppercase;
+					letter-spacing: 1px;
+
+					@media @mobile {
+						font-size: bkscale(@font-swatch5-font-size, 0.95);
+						line-height: bkscale(@font-swatch5-line-height, 0.75);
+					}
+
+					@media @mobile-small {
+						font-size: bkscale(@font-swatch5-font-size, 0.85);
+						line-height: bkscale(@font-swatch5-line-height, 0.80);
+						padding-bottom: 8px;
+					}
+
+					@media @desktop-smaller {
+						font-size: bkscale(@font-swatch5-font-size, 0.95);
+						line-height: bkscale(@font-swatch5-line-height, 0.90);
+						padding-bottom: 12px;
+					}
+				}
 			}
-		}
-
-		@media only screen and (max-width: 1000px) {
-			position: relative;
-			
-			h2 {
-				font-size: bkscale(@font-swatch1-font-size, 0.85);
-				line-height: bkscale(@font-swatch1-line-height, 0.85);
-				padding-bottom: 12px;
-			}
-
-			h3 {
-				font-size: bkscale(@font-swatch5-font-size, 0.95);
-				line-height: bkscale(@font-swatch5-line-height, 0.90);
-				padding-bottom: 12px;
-			}
-		}
-	}
-
-	h2 {
-		padding-bottom: 12px;
-		letter-spacing: 3px;
-		text-transform: uppercase;
-
-		@media @mobile {
-			font-size: bkscale(@font-swatch1-font-size, 0.58);
-			line-height: bkscale(@font-swatch1-line-height, 0.75);
-		}
-
-		@media only screen and (max-height: 420px) {
-			font-size: bkscale(@font-swatch1-font-size, 0.68);
-			line-height: bkscale(@font-swatch1-line-height, 0.75);
-		}
-	}
-
-	h3 {
-		text-transform: uppercase;
-		letter-spacing: 1px;
-
-		@media @mobile {
-			font-size: bkscale(@font-swatch5-font-size, 0.95);
-			line-height: bkscale(@font-swatch5-line-height, 0.75);
 		}
 	}
 }
