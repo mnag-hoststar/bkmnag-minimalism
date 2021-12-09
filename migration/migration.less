@@ -1,5 +1,8 @@
 //  Migration Styles
 
+//  These changes allow rows to work with
+//  existing templates in BK10
+
 // Template styling resets
 
 #migrated {
@@ -16,11 +19,9 @@
             right: 262px;
         }
     }
-}
 
-// Row improvments
+    // Row improvments
 
-#migrated {
 	.row--layout-hero-5a .signupform fieldset input {
 		width: auto;
 	}
@@ -33,11 +34,9 @@
     .row--layout-contact-5a [data-name="companyaddress"] {
         text-align: center;
     }
-}
 
-// Re-add the reset styles
-
-#migrated {
+    // Re-add the reset styles
+    
     .empty-zone,
     #page-zones__main:empty,
     #page-zones__main > .widget:not([data-name="row"]),
@@ -67,7 +66,7 @@
     #page-zones__main > .row + .widget:not([data-name="row"]) {
         margin-top: 20px;
     }
-
+    
     // Empy zone spacing
     &.edit #page-zones__main:empty {
         margin-bottom: 30px;
