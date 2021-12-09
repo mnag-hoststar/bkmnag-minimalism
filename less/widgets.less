@@ -666,6 +666,55 @@ a.contentgroup__link {
 
 // FORMS
 
+input,
+textarea,
+.contactform input,
+.contactform textarea,
+.widget.profile form fieldset input,
+a.checkout-empty-link,
+.blogsearch input,
+.signupform fieldset input,
+.productlist-search input {
+	background-color: @color-swatch7;
+	border: 1px solid darken(@color-swatch1, 10%);
+	text-indent: 8px;
+	-webkit-appearance: none;
+	border-radius: 0;
+
+	.style--light &,
+	.style--accent &,
+	.style--dark & {
+		background-color: @color--light;
+		border-color: darken(@color--light, 10%);
+		color: @contrast--light;
+	}
+
+	&:hover,
+	&:focus {
+		border: 1px solid darken(@color-swatch1, 20%);
+		.transition(ease .5s border);
+
+		.style--light &,
+		.style--accent &,
+		.style--dark & {
+			border-color: darken(@color--light, 20%);
+		}
+	}
+
+	@media @mobile {
+		width: 100%;
+	}
+}
+
+input {
+	height: 40px;
+}
+
+textarea {
+	height: 100px;
+	resize: vertical;
+}
+
 label,
 .contactform label,
 .advancedcontactform label,
@@ -764,28 +813,39 @@ select {
 	}
 }
 
-.contactform .option-item--radio,
-.contactform .option-item--checkbox,
-.advancedcontactform .option-item--radio,
-.advancedcontactform .option-item--checkbox {
-	display: flex;
+.contactform,
+.advancedcontactform {
+	.option-item--radio,
+	.option-item--checkbox {
+		display: flex;
+		align-items: start;
+	}
 }
 
-.advancedcontactform .option-item input[type="radio"],
-.advancedcontactform .option-item input[type="checkbox"],
-.advancedcontactform .option-item .label--radio,
-.advancedcontactform .option-item .label--checkbox {
-	font-family: @font-swatch5-font-family;
-	font-size: @font-swatch5-font-size;
-	text-transform: none;
-	word-break: break-word;
+.advancedcontactform .option-item {
+	input[type="radio"],
+	input[type="checkbox"],
+	.label--radio,
+	.label--checkbox {
+		font-family: @font-swatch5-font-family;
+		font-size: @font-swatch5-font-size;
+		text-transform: none;
+		min-height: auto;
+	}
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		margin: 5px 10px 10px 0;
+		min-height: @font-swatch5-line-height;
+	}
 }
 
 .widget .form {
 	.option-item--radio,
 	.option-item--checkbox {
 		label {
-			word-break: break-word;
+			margin: 5px 0 10px;
+			padding: 0;
 		}
 	}
 }
