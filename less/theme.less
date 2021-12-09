@@ -1,7 +1,5 @@
 // Theme
 
-// TYPOGRAPHY
-
 // Colour Variables
 
 @bg-color: @color-swatch1;
@@ -11,6 +9,8 @@
 @paragraph-color: @color-swatch5;
 @nav-color: @color-swatch6;
 @spare-color: @color-swatch7;
+
+// TYPOGRAPHY
 
 h1, h2, h3, h4, h5, h6,
 [class*="contentgroup__h"],
@@ -144,7 +144,7 @@ hr.line {
 		letter-spacing: @font-swatch7-letter-spacing;
 		color: @font-swatch7-color;
 	}
-
+	
 	&.language-selector--hide {
 		opacity: 0;
 	}
@@ -235,12 +235,10 @@ hr.line {
 		max-width: 100%;
 		.transition(all 0.75s ease);
 	}
-
-	// Link Color
-
+	
 	.language-selector.language-selector--horizontal & {
 		margin: 0 0 @language-padding @language-padding;
-
+		
 		.language-selector--light& {
 			background-color: lighten(@font-swatch7-background-color, 10%);
 
@@ -346,22 +344,16 @@ hr.line {
 		border: none;
 		hyphens: auto;
 	}
-
-	// Horizontal - Item
-
+	
 	.language-selector.language-selector--horizontal & {
 		text-align: right;
 		display: inline-block;
 	}
 
-	// Dropdown - Item
-
 	.language-selector.language-selector--dropdown & {
 		padding-right: @language-padding*4;
 	}
-
-	// Link Color
-
+	
 	.language-selector.language-selector--horizontal &,
 	.language-selector.language-selector--horizontal .language-selector__item--current &,
 	.language-selector.language-selector--dropdown &,
@@ -487,6 +479,7 @@ hr.line {
 	padding: 30px;
 	position: relative;
 	width: 100%;
+
 	@media @mobile {
 		padding: 25px 30px 15px;
 	}
@@ -579,6 +572,7 @@ hr.line {
 	width: 320px;
 
 	.transition(all 0.5s ease);
+
 	.widget.socialicons {
 		float: left;
 		padding: 30px 15px;
@@ -632,7 +626,7 @@ hr.line {
 	width: 100%;
 }
 
-// 4. #FOOTER
+// FOOTER
 
 .bk-footer {
 	.copyright {
