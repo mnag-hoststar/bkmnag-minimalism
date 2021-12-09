@@ -565,14 +565,14 @@
 	.image-wrap {
 		display: none;
 
-		@media (max-width: 650px) {
+		@media @mobile {
 			max-width: 100%;
 		}
 
 		img {
 			max-width: 95% !important;
 
-			@media (max-width: 650px) {
+			@media @mobile {
 				max-width: 100%;
 			}
 		}
@@ -677,7 +677,7 @@
 				text-align: left;
 
 				&:last-child {
-					@media (max-width: 650px) {
+					@media @mobile {
 						display: none;
 					}
 				}
@@ -702,7 +702,7 @@
 		// Item Row
 
 		tr td {
-			@media (max-width: 650px) {
+			@media @mobile {
 				display: table;
 				width: 100%;
 				border-bottom: 0;
@@ -715,7 +715,7 @@
 			}
 
 			&:nth-child(2) {
-				@media (max-width: 650px) {
+				@media @mobile {
 					padding-left: 0;
 					padding-bottom: 20px;
 				}
@@ -729,14 +729,15 @@
 
 			&:nth-child(1) {
 				width: 25%;
-				@media (max-width: 650px) {
+
+				@media @mobile {
 					padding-bottom: 0;
 					width: 100%;
 				}
 			}
 
 			&:last-child {
-				@media (max-width: 650px) {
+				@media @mobile {
 					padding: 6px 20px 6px 0;
 					margin: 0 0 15px;
 				}
@@ -744,7 +745,7 @@
 		}
 
 		tr:last-child td:last-child {
-			@media (max-width: 650px) {
+			@media @mobile {
 				border-top: 0;
 				margin-top: 0;
 				padding-top: 0;

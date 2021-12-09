@@ -422,7 +422,7 @@ hr.line {
 		text-overflow: ellipsis;
 
 		.language-selector--flag-text& {
-			@media only screen and (max-width: 480px) {
+			@media @mobile-medium {
 				display: none;
 			}
 		}
@@ -580,7 +580,7 @@ hr.line {
 		width: 100%;
 	}
 
-	@media only screen and (max-height: 450px) {
+	@media @mobile-small {
 		height: auto;
 	}
 
