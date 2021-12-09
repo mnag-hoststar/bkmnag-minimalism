@@ -3,15 +3,18 @@
 @import "@{templateLocal}/less/widgets.less";
 @import "@{templateLocal}/less/plugins.less";
 
-
-// -----------------------------
-// 3. #Mixins
-// -----------------------------
+// Mixins
 
 .border-radius (@radius: 6px) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
     border-radius: @radius;
+}
+
+.appearance(@appearance: none) {
+    -webkit-appearance: @appearance;
+    -moz-appearance: @appearance;
+    appearance: @appearance;
 }
 
 .transition (@transition...) {
@@ -22,10 +25,7 @@
 	transition: @transition;
 }
 
-
-// -----------------------------
-// 4. #SCROLLBARS
-// -----------------------------
+// SCROLLBARS
 
 body, html {
 	-ms-overflow-style: none;

@@ -1,67 +1,44 @@
-// --------------------------------------
-// BaseKit Standard Theme: LESS > Widgets
-// --------------------------------------
-// -----------------------------
-// #Table of Contents
-// -----------------------------
-//  1.   #LOGO
-//  2.   #COMPANY NAME
-//  3.   #NAVIGATION
-//  4.   #FEATURE
-//  5.   #IMAGES
-//  6.   #GALLERY
-//  7.   #SLIDESHOW
-//  8.   #BUTTONS
-//  8.1  -- #STANDARD
-//  8.2  -- #TWEET
-//  8.3  -- #DROPBOX
-//  8.4  -- #CLICK TO CALL
-//  8.5  -- #PAYPAL
-//  9.   #FORMS
-// 10.   #SOCIAL ICONS
-// 11.   #TWITTER FEED
-// 12.   #DIVIDER (KEYLINE)
-// 13.   #PROFILE
-// 14.   #MAP
-// 15.   #YELP
-//  -----------------------------
+// Widgets
 
-//  -----------------------------
-//  1.   #LOGO
-//  2.   #COMPANY NAME
-//  -----------------------------
+// LOGO & COMPANY NAME
 
 .widget {
 	&.logo,
 	&.companyname {
 		display: table-cell;
 	}
+
 	&.logo {
 		margin-right: 10px;
 		vertical-align: middle;
+
 		img {
 			@media @mobile {
 				max-width: 80%;
 				vertical-align: top;
 			}
+
 			@media only screen and (max-height: 450px) {
 				max-width: 80%;
 				vertical-align: top;
 			}
 		}
 	}
+
 	&.companyname {
 		padding-left: 10px;
 		padding-top: 5px;
-		//white-space: nowrap;
+
 		@media @mobile {
 			max-width: 80%;
 		}
+
 		a {
 			@media @mobile {
 				font-size: bkscale(@font-swatch10-font-size, 0.96);
 				line-height: bkscale(@font-swatch10-font-size, 0.94);
 			}
+
 			@media only screen and (max-height: 450px) {
 				font-size: bkscale(@font-swatch10-font-size, 0.96);
 				line-height: bkscale(@font-swatch10-font-size, 0.94);
@@ -70,35 +47,39 @@
 	}
 }
 
-//  -----------------------------
-//  3.   #NAVIGATION
-//  -----------------------------
+// NAVIGATION
 
 .bk-nav .widget.extendednavigation {
 	background: @color-swatch1;
 	float: none;
 	padding: 30px 15px;
 	width: 100%;
+
 	.extendednavigation {
 		float: none;
 	}
+
 	ul {
 		display: block;
 		padding: 0;
 		list-style: none;
 		width: 100%;
+
 		@media @tablet {
 			display: block;
 		}
+
 		&.align-left,
 		&.align-right,
 		&.align-center {
 			float: none;
 		}
+
 		li {
 			display: block;
 			padding: 10px 0;
 			cursor: pointer;
+
 			&:before {
 				display: inline-block;
 				text-decoration: inherit;
@@ -111,11 +92,14 @@
 				text-transform: none;
 				line-height: 1em;
 			}
+
 			ul {
 				display: none;
 			}
+
 			&:hover {
 				.transition(all 0.5s ease);
+
 				ul {
 					display: block;
 					color: @color-swatch3;
@@ -125,36 +109,46 @@
 					margin-left: 20px;
 					margin-top: 8px;
 					width: 90%;
+
 					li {
 						padding: 12px 6px;
+
 						&:first-child {
 							padding-top: 20px;
 						}
+
 						&:last-child {
 							padding-bottom: 20px;
 						}
+						
 						a {
 							padding-left: 15px;
 						}
 					}
+
 					.text {
 						font-size: bkscale(@font-swatch6-font-size, 0.90);
 					}
 				}
 			}
+
 			@media @tablet {
 				border-bottom: none;
 			}
+
 			&.folder {
 				color: @font-swatch6-color;
+
 				&:after {
 					border-top-color: lighten(@color-swatch5, 32%);
 					top: 22px;
 				}
+
 				.text {
 					color: @font-swatch6-color;
 				}
 			}
+
 			a {
 				&:hover {
 					color: @font-swatch6-color-hover;
@@ -162,6 +156,7 @@
 			}
 		}
 	}
+
 	a.pull {
 		position: absolute;
 		right: 345px;
@@ -173,13 +168,16 @@
 		cursor: pointer;
 		outline: none;
 		.transition(all 0.5s ease);
+
 		@media @mobile {
 			right: 270px;
 			top: 20px;
 		}
+
 		&:hover {
 			.transition(all 0.5s ease);
 		}
+
 		&:after {
 			content: '';
 			position: absolute;
@@ -187,12 +185,14 @@
 			height: 2px;
 			background: @color-swatch5;
 			box-shadow: 0 8px 0 @color-swatch5, 0 16px 0 @color-swatch5;
+
 			@media @tablet {
 				top: 11px;
 				right: 9px;
 			}
 		}
 	}
+
 	.bk-overlay {
 		width: 100%;
 	}
@@ -201,6 +201,7 @@
 div.widget .extendednavigation ul,
 div.widget.extendednavigation ul {
 	display: block;
+
 	li {
 		display: block;
 	}
@@ -220,6 +221,8 @@ div.widget.extendednavigation>ul {
 .bk-pt-home #main .widget.feature.bk-tpl-hidden+.bk-header {
 	.transition(all 0.5s ease);
 	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .menu-active .bk-nav {
@@ -234,9 +237,7 @@ div.widget.extendednavigation>ul {
 	}
 }
 
-//  -----------------------------
-//  4.   #FEATURE
-//  -----------------------------
+// FEATURE
 
 .widget.feature {
 	border-right: 1px solid darken(@color-swatch6, 50%);
@@ -253,32 +254,39 @@ div.widget.extendednavigation>ul {
 	padding: 100px 40px;
 	height: 100%;
 	text-align: center;
+
 	@media @mobile {
 		padding: 100px 20px;
 		-webkit-overflow-scrolling: touch;
 	}
+
 	.spare {
 		@media only screen and (max-height: 450px) {
 			position: relative;
 			top: 30px;
+
 			h2 {
 				font-size: bkscale(@font-swatch1-font-size, 0.62);
 				line-height: bkscale(@font-swatch1-line-height, 0.68);
 				padding-bottom: 8px;
 			}
+
 			h3 {
 				font-size: bkscale(@font-swatch5-font-size, 0.85);
 				line-height: bkscale(@font-swatch5-line-height, 0.80);
 				padding-bottom: 8px;
 			}
 		}
+
 		@media only screen and (max-width: 1000px) {
 			position: relative;
+			
 			h2 {
 				font-size: bkscale(@font-swatch1-font-size, 0.85);
 				line-height: bkscale(@font-swatch1-line-height, 0.85);
 				padding-bottom: 12px;
 			}
+
 			h3 {
 				font-size: bkscale(@font-swatch5-font-size, 0.95);
 				line-height: bkscale(@font-swatch5-line-height, 0.90);
@@ -286,22 +294,27 @@ div.widget.extendednavigation>ul {
 			}
 		}
 	}
+
 	h2 {
 		padding-bottom: 12px;
 		letter-spacing: 3px;
 		text-transform: uppercase;
+
 		@media @mobile {
 			font-size: bkscale(@font-swatch1-font-size, 0.58);
 			line-height: bkscale(@font-swatch1-line-height, 0.75);
 		}
+
 		@media only screen and (max-height: 420px) {
 			font-size: bkscale(@font-swatch1-font-size, 0.68);
 			line-height: bkscale(@font-swatch1-line-height, 0.75);
 		}
 	}
+
 	h3 {
 		text-transform: uppercase;
 		letter-spacing: 1px;
+
 		@media @mobile {
 			font-size: bkscale(@font-swatch5-font-size, 0.95);
 			line-height: bkscale(@font-swatch5-line-height, 0.75);
@@ -309,9 +322,7 @@ div.widget.extendednavigation>ul {
 	}
 }
 
-//  -----------------------------
-//  6.   #GALLERY
-//  -----------------------------
+// GALLERY
 
 .widget.gallery ul li span.inner {
 	.title {
@@ -339,13 +350,12 @@ div.widget.extendednavigation>ul {
 	opacity: 1;
 }
 
-//  -----------------------------
-//  7.   #SLIDESHOW
-//  -----------------------------
+// SLIDESHOW
 
 .widget {
 	&.responsiveslideshow {
 		margin-top: 20px;
+
 		.slideshow-widget-controls {
 			.dot {
 				width: 10px;
@@ -384,6 +394,7 @@ div.widget.extendednavigation>ul {
 				}
 			}
 		}
+
 		.content-wrapper {
 			background-color: fade(@color-swatch1, 75%);
 			top: initial;
@@ -395,24 +406,30 @@ div.widget.extendednavigation>ul {
 			right: auto;
 			max-width: 80%;
 			bottom: 15px;
+
 			@media @mobile {
 				display: block;
 				height: initial;
 			}
+
 			span {
 				color: @color-swatch5;
 				padding: 20px 4px 0 10px;
+
 				@media @mobile {
 					padding-right: 10px;
 				}
+
 				&:last-child {
 					padding-right: 10px;
 				}
+
 				&.title {
 					font-weight: @font-swatch2-font-weight;
 				}
 			}
 		}
+
 		.slideshow-widget {
 			.btn-play {
 				background-color: fade(@color-swatch1, 65%);
@@ -420,24 +437,30 @@ div.widget.extendednavigation>ul {
 				height: 75px;
 				width: 75px;
 				left: 46.5%;
+
 				@media @tablet {
 					left: 44.5%;
 				}
+
 				@media @mobile {
 					left: 43.5%;
 				}
+
 				&:hover {
 					background-color: fade(@color-swatch1, 85%);
 					.transition(all .5s ease);
 				}
+
 				&:after {
 					font-size: 28px;
 				}
+
 				&.pause:after {
 					left: 3px;
 					line-height: 80px;
 				}
 			}
+
 			.btn-prev,
 			.btn-next {
 				background-color: fade(@color-swatch1, 65%);
@@ -451,10 +474,12 @@ div.widget.extendednavigation>ul {
 				text-indent: 1000px;
 				overflow: hidden;
 				.transition(all .5s ease);
+
 				&:hover {
 					background-color: fade(@color-swatch1, 85%);
 					.transition(all .5s ease);
 				}
+
 				&:before {
 					display: block;
 					position: absolute;
@@ -465,22 +490,28 @@ div.widget.extendednavigation>ul {
 					text-indent: 0;
 				}
 			}
+
 			.btn-prev {
 				left: inherit;
 				right: 80px;
+
 				&:before {
 					content: "\003c";
 				}
+
 				@media @mobile {
 					left: 15px;
 					right: inherit;
 				}
 			}
+
 			.btn-next {
 				right: 15px;
+
 				&:before {
 					content: "\003e";
 				}
+
 				@media @mobile {
 					left: 80px;
 					right: inherit;
@@ -490,9 +521,7 @@ div.widget.extendednavigation>ul {
 	}
 }
 
-//  -----------------------------
-//  8.   #BUTTONS
-//  -----------------------------
+// BUTTONS
 
 button.btn,
 .contactform button,
@@ -512,7 +541,8 @@ button.btn,
 .widget.feature .feature-bgimg .content button,
 .widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button,
 a.contentgroup__link {
-	padding: 10px 30px;
+	min-height: 45px;
+	padding: 8px 30px;
 	border: 0;
 	border-radius: 0;
 	background-color: @font-swatch7-background-color;
@@ -561,6 +591,7 @@ a.contentgroup__link {
 			color: @contrast--accent;
 		}
 	}
+
 	@media @mobile {
 		width: 100%;
 	}
@@ -611,6 +642,7 @@ a.contentgroup__link {
 			color: @contrast--accent;
 		}
 	}
+	
 	@media @mobile {
 		width: 100%;
 	}
@@ -631,57 +663,7 @@ a.contentgroup__link {
 	background-image: image('/images/ic-tweet.svg');
 }
 
-//  -----------------------------
-//  9.   #FORMS
-//  -----------------------------
-
-input,
-textarea,
-.contactform input,
-.contactform textarea,
-.widget.profile form fieldset input,
-a.checkout-empty-link,
-.blogsearch input,
-.signupform fieldset input,
-.productlist-search input {
-	background-color: @color-swatch7;
-	border: 1px solid darken(@color-swatch1, 10%);
-	text-indent: 8px;
-	-webkit-appearance: none;
-	border-radius: 0;
-
-	.style--light &,
-	.style--accent &,
-	.style--dark & {
-		background-color: @color--light;
-		border-color: darken(@color--light, 10%);
-		color: @contrast--light;
-	}
-
-	&:hover,
-	&:focus {
-		border: 1px solid darken(@color-swatch1, 20%);
-		.transition(ease .5s border);
-
-		.style--light &,
-		.style--accent &,
-		.style--dark & {
-			border-color: darken(@color--light, 20%);
-		}
-	}
-	@media @mobile {
-		width: 100%;
-	}
-}
-
-input {
-	height: 40px;
-}
-
-textarea {
-	height: 100px;
-	resize: vertical;
-}
+// FORMS
 
 label,
 .contactform label,
@@ -709,14 +691,17 @@ label,
     }
 }
 
+input,
+input[type=search],
+textarea,
+.contactform input,
+.contactform textarea,
+.widget.profile form fieldset input,
+a.checkout-empty-link,
+.blogsearch input,
+.signupform fieldset input,
+.productlist-search input,
 select {
-	cursor: pointer;
-	position: relative;
-	padding-right: 33px;
-}
-
-select,
-input[type=search] {
 	background-color: @color-swatch7;
 	font-family: @font-swatch5-font-family;
 	font-size: @font-swatch5-font-size;
@@ -724,14 +709,16 @@ input[type=search] {
 	line-height: @font-swatch5-line-height;
 	color: @font-swatch5-color;
 	letter-spacing: @font-swatch5-letter-spacing;
-	text-indent: 0;
-	width: 100%;
-	padding: 8px 10px 10px;
-	outline: none;
-	.transition(border .2s);
 	border: 1px solid darken(@color-swatch1, 10%);
+	text-indent: 8px;
+	-webkit-appearance: none;
 	border-radius: 0;
-	height: 40px;
+	border: 1px solid darken(@color-swatch1, 10%);
+	.transition(border .2s);
+	outline: none;
+	border-radius: 0;
+	height: auto;
+	min-height: 45px;
 
 	.style--light &,
 	.style--accent &,
@@ -740,6 +727,47 @@ input[type=search] {
 		border-color: darken(@color--light, 10%);
 		color: @contrast--light;
 	}
+
+	&:hover,
+	&:focus {
+		border: 1px solid darken(@color-swatch1, 20%);
+		.transition(ease .5s border);
+
+		.style--light &,
+		.style--accent &,
+		.style--dark & {
+			border-color: darken(@color--light, 20%);
+		}
+	}
+
+	@media @mobile {
+		width: 100%;
+	}
+}
+
+textarea {
+	height: auto;
+}
+
+select {
+	padding-right: 2.2em;
+    width: 100%;
+    .appearance(none) !important;
+	background-image: url("data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNCAyNCI+Cgk8cG9seWxpbmUgc3Ryb2tlPSIjNzY3ODgwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiIHBvaW50cz0iMjAuMSw4LjYgMTIsMTYuNyAzLjksOC42IiAvPgo8L3N2Zz4=");
+    background-repeat: no-repeat;
+    background-position: right 0.5em center;
+    background-size: 1.2em;
+
+	&::-ms-expand {
+		display: none;
+	}
+}
+
+.contactform .option-item--radio,
+.contactform .option-item--checkbox,
+.advancedcontactform .option-item--radio,
+.advancedcontactform .option-item--checkbox {
+	display: flex;
 }
 
 .advancedcontactform .option-item input[type="radio"],
@@ -749,6 +777,16 @@ input[type=search] {
 	font-family: @font-swatch5-font-family;
 	font-size: @font-swatch5-font-size;
 	text-transform: none;
+	word-break: break-word;
+}
+
+.widget .form {
+	.option-item--radio,
+	.option-item--checkbox {
+		label {
+			word-break: break-word;
+		}
+	}
 }
 
 .form-group {
@@ -763,6 +801,7 @@ input[type=search] {
 			}
 		}
 	}
+
 	&.profile {
 		form {
 			button {
@@ -773,6 +812,7 @@ input[type=search] {
 			}
 		}
 	}
+
 	&.signupform fieldset {
 		button {
 			@media @mobile {
@@ -781,11 +821,14 @@ input[type=search] {
 			}
 		}
 	}
+
 	&.blogsearch {
 		margin: 10px 0;
+
 		label {
 			display: block;
 		}
+
 		button {
 			@media @mobile {
 				width: 100%;
@@ -831,14 +874,12 @@ input[type=search] {
 	}
 }
 
-//  -----------------------------
-//  10.   #SOCIAL ICONS
-//  -----------------------------
+// SOCIAL ICONS
 
 .widget.socialicons,
 .widget.profile .bk-profile-socialicons {
 	margin: 2em 0 1em;
-	//text-align: center;
+
 	span a {
 		background-color: @font-swatch7-background-color;
 		.transition(all .5s ease-out);
@@ -899,15 +940,15 @@ input[type=search] {
 	}
 }
 
-//  -----------------------------
-//  11.   #TWITTER FEED
-//  -----------------------------
+// TWITTER FEED
 
 .widget.twitter {
 	margin: 20px 0;
+
 	img {
 		border-radius: 50%;
 	}
+
 	p {
 		color: @color-swatch4;
 		padding: 0;
@@ -924,18 +965,23 @@ input[type=search] {
 	        color: fade(@contrast--dark, 90%);
 	    }
 	}
+
 	ul li a:hover {
 		text-decoration: none;
 	}
+
 	li:last-child {
 		padding-bottom: 0;
 	}
+
 	// Tweet Content
+
 	.twitter-profile-pic {
-		@media @tablet {;
+		@media @tablet {
 			margin-right: 20px;
 		}
 	}
+
 	.twitter-content {
 		.bk-full-name,
 		a,
@@ -960,7 +1006,9 @@ input[type=search] {
 		        color: @contrast--dark;
 		    }
 		}
+
 		// Tweet Link
+
 		p a,
 		a:hover span.bk-full-name {
 			color: lighten(@color-swatch5, 5%);
@@ -978,6 +1026,7 @@ input[type=search] {
 		        color: darken(@contrast--dark, 5%);
 		    }
 		}
+
 		p a:hover,
 		span a {
 			color: @color-swatch3;
@@ -995,13 +1044,17 @@ input[type=search] {
 		        color: @contrast--dark;
 		    }
 		}
+
 		// Extra Info
+
 		time {
 			display: none;
 		}
+
 		span {
 			font-weight: inherit;
 		}
+		
 		span,
 		span a {
 			font-size: 13px;
