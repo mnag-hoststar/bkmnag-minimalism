@@ -22,10 +22,6 @@
 	}
 }
 
-.blogpost .blog-post-feature-image-wrap {
-	height: 350px;
-}
-
 .blog-post-list {
 	color: @color-swatch4;
 
@@ -40,6 +36,13 @@
 
 	.blog-post-feature-image-wrap {
 		height: 275px;
+	}
+}
+
+
+.blogpost {
+	.blog-post-feature-image-wrap {
+		height: 350px;
 	}
 }
 
@@ -79,40 +82,35 @@
 
 // MENU
 
-.widget {
-	&.menusections {
-		a {
-			font-family: @font-swatch7-font-family;
-			font-size: @font-swatch7-font-size;
-			font-weight: @font-swatch7-font-weight;
-			line-height: @font-swatch7-line-height;
-			color: @font-swatch7-color;
-			letter-spacing: @font-swatch7-letter-spacing;
+.widget.menusections {
+	a {
+		font-family: @font-swatch7-font-family;
+		font-size: @font-swatch7-font-size;
+		font-weight: @font-swatch7-font-weight;
+		line-height: @font-swatch7-line-height;
+		color: @font-swatch7-color;
+		letter-spacing: @font-swatch7-letter-spacing;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:hover {
 			text-decoration: none;
-			text-transform: uppercase;
-
-			&:hover {
-				text-decoration: none;
-			}
-		}
-		
-		li {
-			background-color: @font-swatch7-background-color;
-			padding: 5px 20px;
-			.transition(all .5s ease-out);
-
-			&:hover {
-				background-color: @font-swatch7-background-color-hover;
-				.transition(all 0.75s ease);
-				cursor: pointer;
-			}
 		}
 	}
-}
+	
+	ul li {
+		display: inline-block;
+		margin: 0 0.4em;
+		padding: 5px 20px;
+		background-color: @font-swatch7-background-color;
+		.transition(all .5s ease-out);
 
-.widget.menusections ul li {
-	display: inline-block;
-	margin: 0 0.4em;
+		&:hover {
+			background-color: @font-swatch7-background-color-hover;
+			.transition(all 0.75s ease);
+			cursor: pointer;
+		}
+	}
 }
 
 .menu {
@@ -223,22 +221,22 @@
 
 	.menu-item-price {
 		margin: 10px 0;
-	}
 	
-	.menu-item-price p {
-		font-family: @font-swatch7-font-family;
-		font-size: bkscale(@font-swatch5-font-size, 0.86);
-		font-weight: @font-swatch7-font-weight;
-		line-height: @font-swatch7-line-height;
-		color: @font-swatch7-color;
-		letter-spacing: @font-swatch7-letter-spacing;
-		text-decoration: none;
-		text-transform: uppercase;
-		background-color: @font-swatch7-background-color;
-		padding: 1px;
-		text-align: center;
-		width: 100px;
-		display: table-cell;
+		p {
+			font-family: @font-swatch7-font-family;
+			font-size: bkscale(@font-swatch5-font-size, 0.86);
+			font-weight: @font-swatch7-font-weight;
+			line-height: @font-swatch7-line-height;
+			color: @font-swatch7-color;
+			letter-spacing: @font-swatch7-letter-spacing;
+			text-decoration: none;
+			text-transform: uppercase;
+			background-color: @font-swatch7-background-color;
+			padding: 1px;
+			text-align: center;
+			width: 100px;
+			display: table-cell;
+		}
 	}
 }
 
