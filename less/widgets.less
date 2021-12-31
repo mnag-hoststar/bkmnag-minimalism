@@ -664,6 +664,22 @@ a.contentgroup__link {
 	background-image: image('/images/ic-tweet.svg');
 }
 
+.widget button.btn span {
+	color: @font-swatch7-color;
+
+	.style--light & {
+		color: @contrast--accent;
+	}
+
+	.style--accent & {
+		color: @contrast--dark;
+	}
+
+	.style--dark & {
+		color: @contrast--accent;
+	} 
+}
+
 // FORMS
 
 input,
