@@ -452,6 +452,21 @@
 		border: 1px solid darken(@color-swatch1, 10%);
 		padding: 4px 35px 4px 12px;
 	}
+	
+	.product-actions {
+		button {
+			margin-bottom: 1em;
+			text-align: center;
+        
+			@media @mobile {
+				width: 100%;
+			}
+
+			&:before {
+				float: none;
+			}
+		}
+	}
 }
 
 // Checkout
