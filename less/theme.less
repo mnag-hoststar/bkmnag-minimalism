@@ -145,6 +145,49 @@ code {
 	}
 }
 
+// BLOCKQUOTE
+
+blockquote {
+	background-color: fade(@font-swatch5-color, 10%);
+	font-style: italic;
+	margin: 10px 0;
+	padding: 10px 15px;
+	color: @font-swatch5-color;
+
+	.style--light & {
+		background-color: fade(@contrast--light, 10%);
+		color: @contrast--light;
+	}
+
+	.style--accent & {
+		background-color: fade(@contrast--accent, 10%);
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+		background-color: fade(@contrast--dark, 10%);
+		color: @contrast--dark;
+	}
+
+	&:before {
+		left: 10px;
+		color: @font-swatch5-color;
+		font-size: @font-swatch1-font-size;
+
+		.style--light & {
+			color: @contrast--light;
+		}
+	
+		.style--accent & {
+			color: @contrast--accent;
+		}
+	
+		.style--dark & {
+			color: @contrast--dark;
+		}
+	}
+}
+
 // LINE
 
 hr.line {
