@@ -718,65 +718,22 @@ a.contentgroup__link {
 	} 
 }
 
+
+
+	}
+
+	}
+}
+
 // FORMS
 
 input,
 textarea,
-.contactform input,
-.contactform textarea,
-.signupform fieldset input,
-.signupform fieldset input.email,
-.advancedcontactform input,
-.advancedcontactform textarea,
-.userregistration fieldset input,
-.widget.profile form fieldset input,
-.blogsearch input.blog-search-input,
-.productlist-filter .productlist-search input,
-.widget input[type="text"],
-.widget input[type="email"],
-input:-webkit-autofill,
-input:-webkit-autofill:focus {
-	background-color: @color-swatch7;
-	border: 1px solid darken(@color-swatch1, 10%);
-	text-indent: 8px;
-	-webkit-appearance: none;
-	border-radius: 0;
-
-	.style--light &,
-	.style--accent &,
-	.style--dark & {
-		background-color: @color--light;
-		border-color: darken(@color--light, 10%);
-		color: @contrast--light;
-	}
-
-	&:hover,
-	&:focus {
-		border: 1px solid darken(@color-swatch1, 20%);
-		.transition(ease .5s border);
-
-		.style--light &,
-		.style--accent &,
-		.style--dark & {
-			border-color: darken(@color--light, 20%);
-		}
-	}
-
-	@media @mobile {
-		width: 100%;
-	}
-}
-
-input,
-input[type=search],
-textarea,
-.contactform input,
-.contactform textarea,
-.widget.profile form fieldset input,
 a.checkout-empty-link,
-.blogsearch input,
-.signupform fieldset input,
-.productlist-search input,
+form input,
+form textarea,
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
 select {
 	background-color: @color-swatch7;
 	font-family: @font-swatch5-font-family;
@@ -821,37 +778,6 @@ select {
 	}
 }
 
-label, .label,
-.contactform label,
-.advancedcontactform label,
-.signupform label,
-.ecom-product-vartitle {
-	font-family: @font-swatch4-font-family;
-	font-size: @font-swatch5-font-size * 0.8;
-	font-weight: @font-swatch5-font-weight;
-	line-height: @font-swatch5-line-height;
-	color: @font-swatch5-color;
-	text-transform: uppercase;
-	padding-bottom: 5px;
-
-	.style--light & {
-        color: @contrast--light;
-    }
-
-    .style--accent & {
-        color: @contrast--accent;
-    }
-
-    .style--dark & {
-        color: @contrast--dark;
-    }
-}
-
-label, .label {
-	display: inline-block;
-	padding-bottom: 0.5em;
-}
-
 input {
 	height: 40px;
 }
@@ -881,7 +807,39 @@ select {
 	}
 }
 
-// RADIOBUTTONS AND CHECKBOXES
+label,
+.label,
+.widget label,
+.widget .label,
+.ecom-product-vartitle {
+	font-family: @font-swatch4-font-family;
+	font-size: @font-swatch5-font-size * 0.8;
+	font-weight: @font-swatch5-font-weight;
+	line-height: @font-swatch5-line-height;
+	color: @font-swatch5-color;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+
+	.style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
+}
+
+label,
+.label {
+	display: inline-block;
+	padding-bottom: 0.5em;
+}
+
+// Radiobuttons and Checkboxes
 
 .widget .form .option-list {
 	margin-top: 1em;
