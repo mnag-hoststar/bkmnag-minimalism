@@ -1,8 +1,8 @@
 {
-    "name":"Minimalism",
-    "thumbnail":"thumbnail.png",
-    "screenshot":"minimalism-screenshot.jpg",
-    "templateType":"standard",
+    "name": "Minimalism",
+    "thumbnail": "images/thumbnail.png",
+    "screenshot": "images/screenshot.jpg",
+    "templateType": "standard",
      "versionTenCompatible": 1,
     "pageTypes": ["home"],
     "tags": {
