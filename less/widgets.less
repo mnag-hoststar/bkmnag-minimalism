@@ -171,7 +171,7 @@
 				}
 					
 				> .text {
-					// Folder Arrow
+					word-break: break-word;
 
 					&:after {
 						content: '';
@@ -539,7 +539,7 @@
 			right: 80px;
 
 			&:before {
-				content: "\003c";
+				content: '\003c';
 			}
 
 			@media @mobile {
@@ -552,7 +552,7 @@
 			right: 15px;
 
 			&:before {
-				content: "\003e";
+				content: '\003e';
 			}
 
 			@media @mobile {
@@ -578,7 +578,7 @@ button.button,
 .widget.filedownload button.btn,
 .widget.paypalbuynow .widget.button.paypal,
 .widget.socialicons span a,
-footer.bk-footer .widget.profile .bk-profile-socialicons span a,
+.widget.profile .bk-profile-socialicons span a,
 .widget.feature .feature-bgimg .content button,
 .userregistration fieldset .userregistrationbtn,
 .widget.yelpreview .review-body .review-link a,
@@ -669,11 +669,12 @@ form.blog-search-form .form-group button,
 .widget.dropbox button span,
 .widget.filedownload button.btn {
 	&:before {
-		float: left;
-		padding-right: 0.5em;
+        position: relative;
+        top: 0.1em;
+		padding-right: 0.25em;
 		background-image: none;
 		font-family:'FontAwesome';
-		font-size: 1.5em;
+		font-size: 1.25em;
 	}
 }
 
@@ -691,7 +692,7 @@ form.blog-search-form .form-group button,
 // Social Icons
 
 .widget.socialicons,
-footer.bk-footer .widget.profile .bk-profile-socialicons {
+.widget.profile .bk-profile-socialicons {
 	margin: 2em 0 1em;
 
 	span {
@@ -912,6 +913,8 @@ label,
 		cursor: pointer;
 		padding-left: 2em;
 		margin-bottom: 0;
+		line-height: floor(@font-swatch5-line-height*0.8+2);
+		font-size: @font-swatch5-font-size;
 		word-break: break-word;
 		text-align: left;
 		text-transform: none;
@@ -920,7 +923,7 @@ label,
 			font-family: @font-swatch5-font-family;
 			font-weight: @font-swatch5-font-weight;
 			font-size: @font-swatch5-font-size;
-			line-height: @font-swatch5-line-height;
+			line-height: floor(@font-swatch5-line-height*0.8+2);
 			letter-spacing: @font-swatch5-letter-spacing;
 		}
 			
@@ -928,7 +931,7 @@ label,
 		&:after {
 			cursor: pointer;
 			display: block;
-			content: " ";
+			content: ' ';
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -936,7 +939,6 @@ label,
 
 		&:before {
 			min-width: 0;
-			margin-top: floor(@font-swatch5-line-height*0.1);
 			height: floor(@font-swatch5-line-height*0.8);
 			width: floor(@font-swatch5-line-height*0.8);
 			background-color: @color-swatch1;
@@ -970,7 +972,6 @@ label,
 			border-radius: 50%;
 			background-color: @font-swatch7-background-color;
 			border: 1px solid @font-swatch7-background-color;
-			margin-top: floor(@font-swatch5-line-height*0.1);
 			height: floor(@font-swatch5-line-height*0.8);
 			transform: scale(50%);
 
@@ -994,7 +995,7 @@ label,
 	.label--checkbox,
 	label[for*="input--terms"] {
 		&:after {
-			margin-top: floor(@font-swatch5-line-height*-0.2+1);
+			margin-top: floor(@font-swatch5-line-height*-1.2/4);
 			height: floor(@font-swatch5-line-height*1.2);
 			border: 1px solid transparent;
 			box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;
