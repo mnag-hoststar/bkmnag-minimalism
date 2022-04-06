@@ -86,7 +86,7 @@
 
 .bk-nav {
 	position: fixed;
-	z-index: 200;
+	z-index: 100000000;
 	right: -400px;
 	background: @color-swatch1;
 	height: 100%;
@@ -113,6 +113,11 @@ nav.bk-nav .widget.extendednavigation {
 
 	.bk-overlay {
 		width: 100%;
+	}
+
+	.widget-overlay {
+		top: -100px;
+		left: -100px;
 	}
 
 	// Mobile Menu
@@ -353,6 +358,10 @@ nav.bk-nav .widget.extendednavigation {
 	padding: 0;
 	min-height: 100%;
 	min-height: 100vh;
+
+	.widget-overlay {
+		top: 100px;
+	}
 
 	.feature-bgimg {
 		min-height: 100%;
