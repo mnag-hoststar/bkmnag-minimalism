@@ -319,6 +319,8 @@ nav.bk-nav .widget.extendednavigation {
 								}
 		
 								.text {
+									overflow: visible;
+									word-break: break-word;
 									color: @font-swatch6-color;
 									font-size: bkscale(@font-swatch6-font-size, 0.90);
 								}
@@ -740,6 +742,7 @@ form.blog-search-form .form-group button,
 .widget.profile form fieldset button {
 	display: inline-block;
 	min-height: 45px;
+	height: auto !important;
 	margin: 1em 0 0;
 	padding: 10px 30px;
 	border: 0;
@@ -751,6 +754,7 @@ form.blog-search-form .form-group button,
 	line-height: @font-swatch7-line-height;
 	color: @font-swatch7-color;
 	letter-spacing: @font-swatch7-letter-spacing;
+	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
 	.transition(all .5s ease-out);

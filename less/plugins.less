@@ -282,6 +282,7 @@
 // Single Product
 
 .widget.ecomproduct {
+	.ecom-product {
 	.ecom-product-price {
 		color: lighten(@color-swatch5, 20%);
 		font-size: bkscale(@font-swatch5-font-size, 1.25);
@@ -304,54 +305,52 @@
 				text-decoration: none;
 			}
 		}
-	}
 	
-	.product-actions {
-		button {
-			margin-bottom: 1em;
-			text-align: center;
-			min-width: 250px;
-        
-			@media @mobile {
-				width: 100%;
+		.product-actions {
+			button {
+				margin-bottom: 1em;
+				text-align: center;
+				min-width: 250px;
+			
+				@media @mobile {
+					width: 100%;
+				}
+	
+				&:before {
+					float: none;
+				}
 			}
+		}
 
-			&:before {
-				float: none;
+		.ecom-product-cattag {
+			.ecom-product-tag,
+			.ecom-product-category {
+				display: flex;
+				flex-wrap: wrap;
+				margin-bottom: 0.25em;
+		
+				&:after {
+					content: ':\00a0';
+					order: 0;
+					display: inline-block;
+				}
+			}
+		}
+	
+		.store-category-link,
+		.ecom-product-tag-link {
+			font-weight: 300;
+			order: 1;
+	
+			&:after {
+				content: ',\00a0';
+			}
+	
+			&:last-child::after {
+				content: none;
 			}
 		}
 	}
-
-	.ecom-product-tag,
-	.ecom-product-category {
-		display: flex;
-		flex-wrap: wrap;
-		margin-bottom: 0.25em;
-
-		&:after {
-			content: ':\00a0';
-			order: 0;
-			display: inline-block;
-		}
-	}
-
-	.store-category-link,
-	.ecom-product-tag-link {
-		font-weight: 300;
-		order: 1;
-
-		&:after {
-			content: ',\00a0';
-		}
-
-		&:last-child::after {
-			content: none;
-		}
-	}
-}
-
-.widget.ecomproduct .ecom-product .ecom-product-cattag .ecom-product-category {
-	display: flex;
 }
 
 // Checkout
