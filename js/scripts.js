@@ -3,10 +3,8 @@
 // ----------------------------------------
 
 $(document).ready(function() {
-        
-	// ------------------------------
+    
 	// Make language selector invisible on scrolling down
-	// ------------------------------
 
 	$('#main').on('scroll', function () {
 		var scrollTop = $('#main').scrollTop();
@@ -20,9 +18,7 @@ $(document).ready(function() {
     	
     $(document).bind("DOMSubtreeModified",function(){
     	
-    	// ------------------------------
     	// Change language selector style if the navigation is open
-    	// ------------------------------
     	
     	var isMenuOpen = $('.extendednavigation').find('.open');
     	
@@ -31,7 +27,12 @@ $(document).ready(function() {
     	} else {
     		$('.language-selector').removeClass('language-selector--menu-open');
     	} 
-	
     });
+
+	// Hides other submenus when a main menu point with a submenu is clicked.
+    
+	$(".extendednavigation > ul > li").click(function() {
+		$(this).siblings(".extendednavigation > ul > li.folder").removeClass("folder-open");
+	});
 	
 });

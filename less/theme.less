@@ -102,20 +102,20 @@ pre, code {
 	padding: 0.5em 1em;
 	border: none;
 	.border-radius(0);
-	background-color: darken(@color-swatch1, 10%);
+	background-color: darken(@color-swatch1, 20%);
 	overflow: auto;
 	font-family: monospace;
 
 	.style--light & {
-		background-color: darken(@color-swatch1, 10%);
+		background-color: darken(@color-swatch1, 20%);
 	}
 
 	.style--accent & {
-		background-color: fade(@contrast--accent, 10%);
+		background-color: fade(@contrast--accent, 20%);
 	}
 
 	.style--dark & {
-		background-color: fade(@contrast--dark, 10%);
+		background-color: fade(@contrast--dark, 20%);
 	}
 }
 
@@ -146,6 +146,10 @@ blockquote {
 		top: 0.25em;
 		left: 0;
 		font-size: 1.75em;
+	}
+
+	&:after {
+		display: none;
 	}
 }
 
@@ -828,7 +832,6 @@ tr:last-child td {
 #main {
 	z-index: 0;
 	display: block;
-	-webkit-overflow-scrolling: touch;
 	.border-radius(0px);
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -841,4 +844,20 @@ tr:last-child td {
 	position: relative;
 	right: 0!important;
 	width: 100%;
+}
+
+// Footer
+
+footer.bk-footer {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2em;
+	max-width: 1200px;
+	width: calc(~"100% - 80px");
+
+	.contain {
+		padding: 2em 0 1em !important;
+		text-align: center;
+	}
 }
