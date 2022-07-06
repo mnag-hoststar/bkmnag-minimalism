@@ -339,67 +339,69 @@
 			color: lighten(@color-swatch5, 20%);
 			font-size: bkscale(@font-swatch5-font-size, 1.25);
 		}
+		
+		.ecom-product-info .ecom-product-variation select {
+			color: @font-swatch5-color;
+			font-size: bkscale(@font-swatch7-font-size, 0.85);
+			border: 1px solid darken(@color-swatch1, 10%);
+			padding: 4px 35px 4px 12px;
+		}
+		
+		.btn {
+			margin: 20px 0 0;
+			text-align: center;
+			min-width: 250px;
 
-		.ecom-product {
-			.ecom-product-info .ecom-product-variation select {
-				color: @font-swatch5-color;
-				font-size: bkscale(@font-swatch7-font-size, 0.85);
-				border: 1px solid darken(@color-swatch1, 10%);
-				padding: 4px 35px 4px 12px;
+			&:hover {
+				text-decoration: none;
 			}
-			
-			.btn {
-				margin: 20px 0 0;
+		}
+	
+		.product-actions {
+			button {
+				margin-bottom: 1em;
 				text-align: center;
 				min-width: 250px;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		
-			.product-actions {
-				button {
-					margin-bottom: 1em;
-					text-align: center;
-					min-width: 250px;
-				
-					@media @mobile {
-						width: 100%;
-					}
-		
-					&:before {
-						float: none;
-					}
-				}
-			}
-
-			.ecom-product-cattag {
-				.ecom-product-tag,
-				.ecom-product-category {
-					display: flex;
-					flex-wrap: wrap;
-					margin-bottom: 0.25em;
 			
-					&:after {
-						content: ':\00a0';
-						order: 0;
-						display: inline-block;
-					}
+				@media @mobile {
+					width: 100%;
+				}
+	
+				&:before {
+					float: none;
 				}
 			}
-		
-			.store-category-link,
-			.ecom-product-tag-link {
-				font-weight: 300;
-				order: 1;
+		}
+
+		.ecom-product-cattag {
+			margin-top: 2em;
+
+			.ecom-product-tag,
+			.ecom-product-category {
+				display: flex;
+				flex-wrap: wrap;
+				margin-bottom: 0.25em;
+				font-family: @font-swatch4-font-family;
+				font-weight: bold;
+				line-height: 2.5em;
 		
 				&:after {
-					content: ',\00a0';
+					content: ':\00a0';
+					order: 0;
+					display: inline-block;
 				}
-		
-				&:last-child::after {
-					content: none;
+	
+				.store-category-link,
+				.ecom-product-tag-link {
+					display: inline-block;
+					line-height: 1.4em;
+					font-weight: 300;
+					order: 1;
+					margin: 0.25em;
+					padding: 0.25em;
+					background-color: darken(@color-swatch1, 10%);
+					font-family: @font-swatch5-font-family;
+					word-break: break-word;
 				}
 			}
 		}
